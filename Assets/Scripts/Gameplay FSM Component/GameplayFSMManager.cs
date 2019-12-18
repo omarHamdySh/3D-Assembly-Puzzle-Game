@@ -122,7 +122,6 @@ public class GameplayFSMManager : MonoBehaviour
 
         //push the first state for the player
         PushState(tutorialState);
-
         if (hintTxt)
         {
             hintTxt.enabled = false;
