@@ -1,2 +1,2 @@
 
-Copyright (C) 2019 OmarHamdySh
+Copyright (C) 2019 Omar Hamdy

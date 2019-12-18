@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 407619c5c19a54982b3880b5a085c597, type: 3}
+  iconMaxWidth: 192
+  title: Starter Project (OH)
+  sections:
+  - heading: Omar Hamdy
+    text: This is Omar Hamdy baby, welcome to my starter project free documented asset
+      made by me. The starter project is just an empty basic project which is very
+      important to me at the begining of a new project or even to add some basic functionality
+      to an already existed one. The point is that there are some essintial scripts
+      that you might need use at almost any and every game these scripts to handle
+      time, management between classes, Different gameplay modes, states and much
+      more. The package will be updated on github so keep track of it untill it reaches
+      to be named SDK God willing. Hope to enjoy it.
+    linkText: Documentation
+    url: www.google.com
+  - heading: 
+    text: 
+    linkText: My Linkedin
+    url: https://eg.linkedin.com/in/omarhamdys
+  - heading: 
+    text: 
+    linkText: My Github
+    url: https://github.com/
+  - heading: 
+    text: Send me an email including your github username to add you to the collaborators
+      of the project.
+    linkText: o.h.shafik@gmail.com
+    url: o.h.shafik@gmail.com
+  loadedLayout: 1
