@@ -19,6 +19,8 @@ namespace Lean.Common
 		private static List<Color> colors = new List<Color>();
 
 		private static GUIContent customContent = new GUIContent();
+		
+		private static GUIStyle expandStyle;
 
 		public static void BeginError(bool error)
 		{
@@ -136,13 +138,21 @@ namespace Lean.Common
 			customContent.text    = string.IsNullOrEmpty(overrideText   ) == false ? overrideText    : property.displayName;
 			customContent.tooltip = string.IsNullOrEmpty(overrideTooltip) == false ? overrideTooltip : property.tooltip;
 
+			if (expandStyle == null)
+			{
+				expandStyle = new GUIStyle(EditorStyles.miniLabel); expandStyle.alignment = TextAnchor.MiddleRight;
+			}
+
+			if (EditorGUI.DropdownButton(new Rect(rect.position + Vector2.left * 15, new Vector2(15.0f, rect.height)), new GUIContent(expand ? "-" : "+"), FocusType.Keyboard, expandStyle) == true)
+			{
+				expand = !expand;
+			}
+
 			EditorGUI.BeginChangeCheck();
 
 			EditorGUI.PropertyField(rect, property, customContent, true);
 
 			var changed = EditorGUI.EndChangeCheck();
-
-			expand = EditorGUI.Foldout(new Rect(rect.position, new Vector2(25.0f, rect.height)), expand, string.Empty);
 
 			return changed;
 		}
