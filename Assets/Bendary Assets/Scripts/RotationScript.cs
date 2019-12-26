@@ -12,9 +12,9 @@ public class RotationScript : MonoBehaviour
     {
         if (IsSelected)
         {
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxis("HorizontalRotate") != 0 || Input.GetAxis("VerticalRotate") != 0)
             {
-                RotateShape((new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0)) * rotateSpeed);
+                RotateShape((new Vector3(Input.GetAxis("HorizontalRotate"), Input.GetAxis("VerticalRotate"), 0)) * rotateSpeed);
             }
         }
     }
