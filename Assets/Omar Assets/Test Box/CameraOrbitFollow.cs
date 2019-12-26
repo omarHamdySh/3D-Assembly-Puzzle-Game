@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CameraOrbitFollow : MonoBehaviour
 {
-    public GameObject objectToFollow;
     public bool isFollowingObject;
 
     // Update is called once per frame
     void Update()
     {
-        if (isFollowingObject)
+        if (isFollowingObject && SelectionScript.instance.SelectedObject)
         {
-            this.transform.position = objectToFollow.transform.position;
+            this.transform.position = SelectionScript.instance.SelectedObject.transform.position;
         }
     }
 }
