@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class OrientationNode : MonoBehaviour
 {
+    OrientationMode orientationMode;
+    private float step = 1;
+
+    /// <summary>
+    /// 
+    /// </summary>
     enum OrientationMode
     {
         Positional,
         Rotational
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     enum Axis
     {
         X,
@@ -17,16 +26,19 @@ public class OrientationNode : MonoBehaviour
         Z
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     enum ValueEditType
     {
         Incrementatl,
         Decremental
     }
 
-    OrientationMode orientationMode;
     
-    private float step = 1;
-
+    /// <summary>
+    /// 
+    /// </summary>
     private void Update()
     {
         if (!SelectionScript.instance.SelectedObject)
@@ -41,6 +53,9 @@ public class OrientationNode : MonoBehaviour
         OrientSelectedObject();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void adjustSnapStep()
     {
         if (Input.GetKeyDown(KeyCode.KeypadPlus) || Input.GetKeyDown(KeyCode.Plus))
@@ -60,6 +75,9 @@ public class OrientationNode : MonoBehaviour
         step = Mathf.Clamp(step, 0.5f, 1.5f);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void OrientSelectedObject()
     {
         if (this.gameObject == SelectionScript.instance.SelectedObject)
@@ -76,6 +94,9 @@ public class OrientationNode : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void toggleOrientationMode()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -94,6 +115,9 @@ public class OrientationNode : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void Move()
     {
         if (Input.GetKeyDown(KeyCode.D))
@@ -121,6 +145,10 @@ public class OrientationNode : MonoBehaviour
             mapAndPerformOrientation(Axis.Y, ValueEditType.Decremental);
         }
     }
+    
+    /// <summary>
+    /// 
+    /// </summary>
     private void Rotate()
     {
         if (Input.GetKeyDown(KeyCode.D))
@@ -149,6 +177,11 @@ public class OrientationNode : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="axis"></param>
+    /// <param name="valueEditType"></param>
     private void mapAndPerformOrientation(Axis axis, ValueEditType valueEditType)
     {
         switch (axis)
@@ -167,6 +200,13 @@ public class OrientationNode : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="z"></param>
+    /// <param name="sign"></param>
     public void orientSelectedObject(bool x, bool y, bool z, bool sign)
     {
 
