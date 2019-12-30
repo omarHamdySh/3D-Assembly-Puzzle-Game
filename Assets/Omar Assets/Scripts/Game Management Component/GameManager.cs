@@ -323,5 +323,10 @@ public class GameManager : MonoBehaviour
                 }
         }
     }
+    public void SetCurrentLevel(int levelNo)
+    {
+        currentLevel = (GameLevelsNames)levelNo;
+    }
+
     #endregion
 }

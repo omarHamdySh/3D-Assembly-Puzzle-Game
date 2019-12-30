@@ -1,11 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OrientationNode : MonoBehaviour
 {
     OrientationMode orientationMode;
     private float step = 1;
+    private bool isRotate = false;         // Bendary Modify
 
     /// <summary>
     /// 
@@ -35,7 +35,7 @@ public class OrientationNode : MonoBehaviour
         Decremental
     }
 
-    
+
     /// <summary>
     /// 
     /// </summary>
@@ -145,7 +145,7 @@ public class OrientationNode : MonoBehaviour
             mapAndPerformOrientation(Axis.Y, ValueEditType.Decremental);
         }
     }
-    
+
     /// <summary>
     /// 
     /// </summary>
@@ -187,13 +187,13 @@ public class OrientationNode : MonoBehaviour
         switch (axis)
         {
             case Axis.X:
-                orientSelectedObject(true, false, false, valueEditType == ValueEditType.Incrementatl);
+                orientSelectedObject(Vector3.right, valueEditType == ValueEditType.Incrementatl);
                 break;
             case Axis.Y:
-                orientSelectedObject(false, true, false, valueEditType == ValueEditType.Incrementatl);
+                orientSelectedObject(Vector3.up, valueEditType == ValueEditType.Incrementatl);
                 break;
             case Axis.Z:
-                orientSelectedObject(false, false, true, valueEditType == ValueEditType.Incrementatl);
+                orientSelectedObject(Vector3.forward, valueEditType == ValueEditType.Incrementatl);
                 break;
             default:
                 break;
@@ -206,8 +206,8 @@ public class OrientationNode : MonoBehaviour
     /// <param name="x"></param>
     /// <param name="y"></param>
     /// <param name="z"></param>
-    /// <param name="sign"></param>
-    public void orientSelectedObject(bool x, bool y, bool z, bool sign)
+    /// <param name="signed"></param>
+    public void orientSelectedObject(Vector3 axis, bool signed)
     {
 
         if (this.gameObject == SelectionScript.instance.SelectedObject)
@@ -217,21 +217,48 @@ public class OrientationNode : MonoBehaviour
                 case OrientationMode.Positional:
 
                     transform.position = new Vector3(
-                        (x == true ? transform.position.x + (sign == true ? step : -step) : transform.position.x),
-                        (y == true ? transform.position.y + (sign == true ? step : -step) : transform.position.y),
-                        (z == true ? transform.position.z + (sign == true ? step : -step) : transform.position.z)
+                        (axis.x != 0 ? transform.position.x + (signed == true ? step : -step) : transform.position.x),
+                        (axis.y != 0 ? transform.position.y + (signed == true ? step : -step) : transform.position.y),
+                        (axis.z != 0 ? transform.position.z + (signed == true ? step : -step) : transform.position.z)
                         );
                     break;
                 case OrientationMode.Rotational:
+                    //transform.Rotate(axis,(sign == true ? 90 : -90),Space.World);
 
-                    transform.Rotate(
-                        (x == true ? Vector3.right :
-                        (y == true ? Vector3.up :
-                        (z == true ? Vector3.forward : Vector3.zero))),
-                        (sign == true ? 90 : -90),
-                        Space.World);
+                    // Bendary Modification
+                    if (!isRotate)
+                    {
+                        isRotate = true;
+                        StartCoroutine(RotateSlow(axis,
+                            (signed == true ? 90 : -90)));
+                    }
                     break;
             }
         }
+    }
+
+    // Bendary Modify
+    [SerializeField] private float rotateSpeed;
+    [SerializeField] private int rotateValeo = 5;
+    IEnumerator RotateSlow(Vector3 axis, int sign)
+    {
+        if (sign > 0)
+        {
+            for (int i = 0; i < sign; i += rotateValeo)
+            {
+                yield return new WaitForSeconds(rotateSpeed);
+                transform.Rotate(axis, rotateValeo, Space.World);
+            }
+        }
+        else if (sign < 0)
+        {
+            for (int i = 0; i > sign; i -= rotateValeo)
+            {
+                yield return new WaitForSeconds(rotateSpeed);
+                transform.Rotate(axis, -rotateValeo, Space.World);
+            }
+        }
+        isRotate = false;
+        yield return null;
     }
 }

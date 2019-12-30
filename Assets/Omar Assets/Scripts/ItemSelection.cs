@@ -17,16 +17,25 @@ public class ItemSelection : MonoBehaviour
     }
     private void OnMouseOver()
     {
-        
+        if (true)
+        {
+
+        }
     }
     private void OnMouseExit()
     {
-        
+        if (true)
+        {
+
+        }
     }
 
     private void OnMouseDown()
     {
-        
+        if (true)
+        {
+
+        }
     }
 
     private void OnMouseDrag()
