@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class moveByDrag : MonoBehaviour
 {
-    public Camera cam;
-    public bool dragged;
+    private Camera cam;
+    private Rigidbody myRb;
+
+    private float dragSpeed = 1;
+    private bool dragged;
+
 
     private float distance;
 
+    private void Start()
+    {
+        cam = Camera.main;
+        myRb = GetComponent<Rigidbody>();
+    }
     private void OnMouseDrag()
     {
         dragged = true;
-        transform.position = getMousePos();
+        transform.position = Vector3.Lerp(transform.position, getMousePos(), Time.deltaTime * dragSpeed);
     }
 
     private void OnMouseUp()
