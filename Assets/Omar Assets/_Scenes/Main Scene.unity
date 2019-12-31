@@ -112,106 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &751735
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 751740}
-  - component: {fileID: 751739}
-  - component: {fileID: 751738}
-  - component: {fileID: 751737}
-  - component: {fileID: 751736}
-  m_Layer: 0
-  m_Name: Game Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &751736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a890e06504552cf4f8d7c8ef0dc1ef8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeManager: {fileID: 0}
-  gameplayFSMManager: {fileID: 0}
-  isTesting: 0
-  currentlySelectedItem: 0
-  currentControlleMode: 0
-  currentLevel: 0
---- !u!114 &751737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00228ff16cf62604082d4faefc7446c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 0
---- !u!114 &751738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba916e4d270bd045875755b607baaa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TotalGameDays: 0
-  gameTime:
-    gameHour: 0
-    gameDay: 0
-    realSecond: 0
-    realMinute: 0
-    realHour: 0
-  isUpdating: 0
-  eventsTime: []
---- !u!114 &751739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1e7acd69ca76f4383d68ba9f6b47ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentStateTxt: {fileID: 0}
-  hintTxt: {fileID: 0}
---- !u!4 &751740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06750002, y: -0.0164, z: 0.3128}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &60922479
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,9 +126,9 @@ GameObject:
   - component: {fileID: 60922483}
   - component: {fileID: 60922484}
   - component: {fileID: 60922486}
-  - component: {fileID: 60922485}
   - component: {fileID: 60922487}
   - component: {fileID: 60922488}
+  - component: {fileID: 60922485}
   m_Layer: 12
   m_Name: CowP4
   m_TagString: CowP4
@@ -328,7 +228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 60922479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -375,7 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &110805776
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,9 +289,9 @@ GameObject:
   - component: {fileID: 110805780}
   - component: {fileID: 110805781}
   - component: {fileID: 110805783}
-  - component: {fileID: 110805782}
   - component: {fileID: 110805784}
   - component: {fileID: 110805785}
+  - component: {fileID: 110805782}
   m_Layer: 17
   m_Name: CowP9
   m_TagString: CowP9
@@ -492,7 +391,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 110805776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -539,7 +438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &151691252
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,9 +452,9 @@ GameObject:
   - component: {fileID: 151691256}
   - component: {fileID: 151691257}
   - component: {fileID: 151691259}
-  - component: {fileID: 151691258}
   - component: {fileID: 151691260}
   - component: {fileID: 151691261}
+  - component: {fileID: 151691258}
   m_Layer: 21
   m_Name: CowP13
   m_TagString: CowP13
@@ -656,7 +554,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 151691252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -703,7 +601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,9 +684,9 @@ GameObject:
   - component: {fileID: 203183678}
   - component: {fileID: 203183679}
   - component: {fileID: 203183681}
-  - component: {fileID: 203183680}
   - component: {fileID: 203183682}
   - component: {fileID: 203183683}
+  - component: {fileID: 203183680}
   m_Layer: 15
   m_Name: CowP7
   m_TagString: CowP7
@@ -889,7 +786,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 203183674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -936,7 +833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &336053978
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f321730d69a874bb5d775c55d28dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFollowingObject: 1
+  isFollowingObject: 0
 --- !u!4 &336053980
 Transform:
   m_ObjectHideFlags: 0
@@ -980,7 +876,7 @@ Transform:
   m_Children:
   - {fileID: 1343491421}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &393797549
 PrefabInstance:
@@ -1041,9 +937,9 @@ GameObject:
   - component: {fileID: 445661949}
   - component: {fileID: 445661950}
   - component: {fileID: 445661952}
-  - component: {fileID: 445661951}
   - component: {fileID: 445661953}
   - component: {fileID: 445661954}
+  - component: {fileID: 445661951}
   m_Layer: 10
   m_Name: CowP2
   m_TagString: CowP2
@@ -1143,7 +1039,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 445661945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -1190,7 +1086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &500671486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,9 +1100,9 @@ GameObject:
   - component: {fileID: 500671490}
   - component: {fileID: 500671491}
   - component: {fileID: 500671493}
-  - component: {fileID: 500671492}
   - component: {fileID: 500671494}
   - component: {fileID: 500671495}
+  - component: {fileID: 500671492}
   m_Layer: 18
   m_Name: CowP10
   m_TagString: CowP10
@@ -1307,7 +1202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 500671486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -1354,7 +1249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1383,7 @@ Transform:
   - {fileID: 723952244}
   - {fileID: 1293096736}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
 --- !u!114 &596524760
 MonoBehaviour:
@@ -1513,83 +1407,13 @@ GameObject:
   m_Component:
   - component: {fileID: 713759468}
   - component: {fileID: 713759467}
-  - component: {fileID: 713759466}
-  - component: {fileID: 713759465}
-  - component: {fileID: 713759464}
-  - component: {fileID: 713759463}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Selection Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &713759463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713759462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a890e06504552cf4f8d7c8ef0dc1ef8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeManager: {fileID: 0}
-  gameplayFSMManager: {fileID: 0}
-  isTesting: 0
-  currentlySelectedItem: 0
-  currentControlleMode: 0
-  currentLevel: 0
---- !u!114 &713759464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713759462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00228ff16cf62604082d4faefc7446c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 0
---- !u!114 &713759465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713759462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba916e4d270bd045875755b607baaa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TotalGameDays: 0
-  gameTime:
-    gameHour: 0
-    gameDay: 0
-    realSecond: 0
-    realMinute: 0
-    realHour: 0
-  isUpdating: 0
-  eventsTime: []
---- !u!114 &713759466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713759462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1e7acd69ca76f4383d68ba9f6b47ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentStateTxt: {fileID: 0}
-  hintTxt: {fileID: 0}
 --- !u!114 &713759467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,7 +1439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &723952243
 GameObject:
@@ -1631,9 +1455,9 @@ GameObject:
   - component: {fileID: 723952247}
   - component: {fileID: 723952248}
   - component: {fileID: 723952250}
-  - component: {fileID: 723952249}
   - component: {fileID: 723952251}
   - component: {fileID: 723952252}
+  - component: {fileID: 723952249}
   m_Layer: 24
   m_Name: CowP16
   m_TagString: CowP16
@@ -1733,7 +1557,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 723952243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -1780,7 +1604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &737029909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,9 +1618,9 @@ GameObject:
   - component: {fileID: 737029913}
   - component: {fileID: 737029914}
   - component: {fileID: 737029916}
-  - component: {fileID: 737029915}
   - component: {fileID: 737029917}
   - component: {fileID: 737029918}
+  - component: {fileID: 737029915}
   m_Layer: 23
   m_Name: CowP15
   m_TagString: CowP15
@@ -1897,7 +1720,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 737029909}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -1944,7 +1767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &777131078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,9 +1781,9 @@ GameObject:
   - component: {fileID: 777131082}
   - component: {fileID: 777131083}
   - component: {fileID: 777131085}
-  - component: {fileID: 777131084}
   - component: {fileID: 777131086}
   - component: {fileID: 777131087}
+  - component: {fileID: 777131084}
   m_Layer: 13
   m_Name: CowP5
   m_TagString: CowP5
@@ -2061,7 +1883,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 777131078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -2108,7 +1930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &780827828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,9 +1944,9 @@ GameObject:
   - component: {fileID: 780827832}
   - component: {fileID: 780827833}
   - component: {fileID: 780827835}
-  - component: {fileID: 780827834}
   - component: {fileID: 780827836}
   - component: {fileID: 780827837}
+  - component: {fileID: 780827834}
   m_Layer: 22
   m_Name: CowP14
   m_TagString: CowP14
@@ -2225,7 +2046,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 780827828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -2272,7 +2093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &804215356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,7 +2148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1293096735
 GameObject:
@@ -2344,10 +2164,10 @@ GameObject:
   - component: {fileID: 1293096739}
   - component: {fileID: 1293096740}
   - component: {fileID: 1293096742}
-  - component: {fileID: 1293096741}
   - component: {fileID: 1293096743}
   - component: {fileID: 1293096744}
   - component: {fileID: 1293096745}
+  - component: {fileID: 1293096741}
   m_Layer: 25
   m_Name: CowP17
   m_TagString: CowP17
@@ -2447,7 +2267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1293096735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -2478,7 +2298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!54 &1293096744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2507,7 +2326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &1328355374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,9 +2340,9 @@ GameObject:
   - component: {fileID: 1328355378}
   - component: {fileID: 1328355379}
   - component: {fileID: 1328355381}
-  - component: {fileID: 1328355380}
   - component: {fileID: 1328355382}
   - component: {fileID: 1328355383}
+  - component: {fileID: 1328355380}
   m_Layer: 20
   m_Name: CowP12
   m_TagString: CowP12
@@ -2624,7 +2442,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1328355374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -2671,7 +2489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &1343491420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,9 +2604,9 @@ GameObject:
   - component: {fileID: 1384081374}
   - component: {fileID: 1384081375}
   - component: {fileID: 1384081377}
-  - component: {fileID: 1384081376}
   - component: {fileID: 1384081378}
   - component: {fileID: 1384081379}
+  - component: {fileID: 1384081376}
   m_Layer: 9
   m_Name: CowP1
   m_TagString: CowP1
@@ -2805,7 +2622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384081370}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.009997179, y: 0.17292145, z: -0.0071750274}
+  m_LocalPosition: {x: 0.209, y: 0.17292145, z: -0.007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 596524759}
@@ -2889,7 +2706,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384081370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -2936,7 +2753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &1754304390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,9 +2767,9 @@ GameObject:
   - component: {fileID: 1754304394}
   - component: {fileID: 1754304395}
   - component: {fileID: 1754304397}
-  - component: {fileID: 1754304396}
   - component: {fileID: 1754304398}
   - component: {fileID: 1754304399}
+  - component: {fileID: 1754304396}
   m_Layer: 14
   m_Name: CowP6
   m_TagString: CowP6
@@ -3053,7 +2869,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1754304390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -3100,7 +2916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &1944343637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,7 +2980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955106366
 GameObject:
@@ -3181,9 +2996,9 @@ GameObject:
   - component: {fileID: 1955106370}
   - component: {fileID: 1955106371}
   - component: {fileID: 1955106373}
-  - component: {fileID: 1955106372}
   - component: {fileID: 1955106374}
   - component: {fileID: 1955106375}
+  - component: {fileID: 1955106372}
   m_Layer: 11
   m_Name: CowP3
   m_TagString: CowP3
@@ -3283,7 +3098,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1955106366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -3330,7 +3145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &1963216127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,9 +3159,9 @@ GameObject:
   - component: {fileID: 1963216131}
   - component: {fileID: 1963216132}
   - component: {fileID: 1963216134}
-  - component: {fileID: 1963216133}
   - component: {fileID: 1963216135}
   - component: {fileID: 1963216136}
+  - component: {fileID: 1963216133}
   m_Layer: 19
   m_Name: CowP11
   m_TagString: CowP11
@@ -3447,7 +3261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1963216127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -3494,7 +3308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!1 &2100469830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,9 +3322,9 @@ GameObject:
   - component: {fileID: 2100469834}
   - component: {fileID: 2100469835}
   - component: {fileID: 2100469837}
-  - component: {fileID: 2100469836}
   - component: {fileID: 2100469838}
   - component: {fileID: 2100469839}
+  - component: {fileID: 2100469836}
   m_Layer: 16
   m_Name: CowP8
   m_TagString: CowP8
@@ -3611,7 +3424,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2100469830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ee36f97d301d42a4da2db3252f9c8, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e373cbea4d93a47896231248b16117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: -1
@@ -3658,7 +3471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f1bec050ce827438be6b774a7e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragged: 0
 --- !u!33 &3071830612211580840
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4435,9 +4247,9 @@ GameObject:
   - component: {fileID: 3071830612215005128}
   - component: {fileID: 3071830612211580840}
   - component: {fileID: 3071830612212710888}
-  - component: {fileID: 3071830612214637483}
   - component: {fileID: 3071830612214637481}
   - component: {fileID: 3071830612214637484}
+  - component: {fileID: 3071830612214637483}
   m_Layer: 9
   m_Name: CowB1
   m_TagString: CowP1
@@ -4484,9 +4296,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!54 &3071830612214637484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4514,9 +4330,9 @@ GameObject:
   - component: {fileID: 3071830612215005152}
   - component: {fileID: 3071830612211580864}
   - component: {fileID: 3071830612212710656}
-  - component: {fileID: 3071830612214637519}
   - component: {fileID: 3071830612214637505}
   - component: {fileID: 3071830612214637555}
+  - component: {fileID: 3071830612214637519}
   m_Layer: 22
   m_Name: CowP14
   m_TagString: CowP14
@@ -4549,9 +4365,9 @@ GameObject:
   - component: {fileID: 3071830612215005154}
   - component: {fileID: 3071830612211580866}
   - component: {fileID: 3071830612212710658}
-  - component: {fileID: 3071830612214637517}
   - component: {fileID: 3071830612214637507}
   - component: {fileID: 3071830612214637554}
+  - component: {fileID: 3071830612214637517}
   m_Layer: 23
   m_Name: CowP15
   m_TagString: CowP15
@@ -4584,9 +4400,9 @@ GameObject:
   - component: {fileID: 3071830612215005156}
   - component: {fileID: 3071830612211580868}
   - component: {fileID: 3071830612212710660}
-  - component: {fileID: 3071830612214637515}
   - component: {fileID: 3071830612214637509}
   - component: {fileID: 3071830612214637553}
+  - component: {fileID: 3071830612214637515}
   m_Layer: 24
   m_Name: CowP16
   m_TagString: CowP16
@@ -4619,9 +4435,9 @@ GameObject:
   - component: {fileID: 3071830612215005158}
   - component: {fileID: 3071830612211580870}
   - component: {fileID: 3071830612212710662}
-  - component: {fileID: 3071830612214637513}
   - component: {fileID: 3071830612214637511}
   - component: {fileID: 3071830612214637552}
+  - component: {fileID: 3071830612214637513}
   m_Layer: 25
   m_Name: CowP17
   m_TagString: CowP17
@@ -4654,9 +4470,9 @@ GameObject:
   - component: {fileID: 3071830612215005160}
   - component: {fileID: 3071830612211580872}
   - component: {fileID: 3071830612212710664}
-  - component: {fileID: 3071830612214637535}
   - component: {fileID: 3071830612214637533}
   - component: {fileID: 3071830612214637559}
+  - component: {fileID: 3071830612214637535}
   m_Layer: 18
   m_Name: CowP10
   m_TagString: CowP10
@@ -4673,9 +4489,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637514
 GameObject:
   m_ObjectHideFlags: 0
@@ -4687,9 +4507,9 @@ GameObject:
   - component: {fileID: 3071830612215005162}
   - component: {fileID: 3071830612211580874}
   - component: {fileID: 3071830612212710666}
-  - component: {fileID: 3071830612214637531}
   - component: {fileID: 3071830612214637529}
   - component: {fileID: 3071830612214637558}
+  - component: {fileID: 3071830612214637531}
   m_Layer: 19
   m_Name: CowP11
   m_TagString: CowP11
@@ -4706,9 +4526,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,9 +4544,9 @@ GameObject:
   - component: {fileID: 3071830612215005164}
   - component: {fileID: 3071830612211580876}
   - component: {fileID: 3071830612212710668}
-  - component: {fileID: 3071830612214637527}
   - component: {fileID: 3071830612214637525}
   - component: {fileID: 3071830612214637557}
+  - component: {fileID: 3071830612214637527}
   m_Layer: 20
   m_Name: CowP12
   m_TagString: CowP12
@@ -4739,9 +4563,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637518
 GameObject:
   m_ObjectHideFlags: 0
@@ -4753,9 +4581,9 @@ GameObject:
   - component: {fileID: 3071830612215005166}
   - component: {fileID: 3071830612211580878}
   - component: {fileID: 3071830612212710670}
-  - component: {fileID: 3071830612214637523}
   - component: {fileID: 3071830612214637521}
   - component: {fileID: 3071830612214637556}
+  - component: {fileID: 3071830612214637523}
   m_Layer: 21
   m_Name: CowP13
   m_TagString: CowP13
@@ -4772,9 +4600,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637520
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,9 +4618,9 @@ GameObject:
   - component: {fileID: 3071830612215005168}
   - component: {fileID: 3071830612211580880}
   - component: {fileID: 3071830612212710672}
-  - component: {fileID: 3071830612214637543}
   - component: {fileID: 3071830612214637542}
   - component: {fileID: 3071830612214637563}
+  - component: {fileID: 3071830612214637543}
   m_Layer: 14
   m_Name: CowP6
   m_TagString: CowP6
@@ -4821,9 +4653,9 @@ GameObject:
   - component: {fileID: 3071830612215005170}
   - component: {fileID: 3071830612211580882}
   - component: {fileID: 3071830612212710674}
-  - component: {fileID: 3071830612214637541}
   - component: {fileID: 3071830612214637540}
   - component: {fileID: 3071830612214637562}
+  - component: {fileID: 3071830612214637541}
   m_Layer: 15
   m_Name: CowP7
   m_TagString: CowP7
@@ -4840,9 +4672,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,9 +4690,9 @@ GameObject:
   - component: {fileID: 3071830612215005172}
   - component: {fileID: 3071830612211580884}
   - component: {fileID: 3071830612212710676}
-  - component: {fileID: 3071830612214637539}
   - component: {fileID: 3071830612214637538}
   - component: {fileID: 3071830612214637561}
+  - component: {fileID: 3071830612214637539}
   m_Layer: 16
   m_Name: CowP8
   m_TagString: CowP8
@@ -4889,9 +4725,9 @@ GameObject:
   - component: {fileID: 3071830612215005174}
   - component: {fileID: 3071830612211580886}
   - component: {fileID: 3071830612212710678}
-  - component: {fileID: 3071830612214637537}
   - component: {fileID: 3071830612214637536}
   - component: {fileID: 3071830612214637560}
+  - component: {fileID: 3071830612214637537}
   m_Layer: 17
   m_Name: CowP9
   m_TagString: CowP9
@@ -4908,9 +4744,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637528
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,9 +4762,9 @@ GameObject:
   - component: {fileID: 3071830612215005176}
   - component: {fileID: 3071830612211580888}
   - component: {fileID: 3071830612212710680}
-  - component: {fileID: 3071830612214637551}
   - component: {fileID: 3071830612214637550}
   - component: {fileID: 3071830612214637567}
+  - component: {fileID: 3071830612214637551}
   m_Layer: 10
   m_Name: CowB2
   m_TagString: CowP2
@@ -4957,9 +4797,9 @@ GameObject:
   - component: {fileID: 3071830612215005178}
   - component: {fileID: 3071830612211580890}
   - component: {fileID: 3071830612212710682}
-  - component: {fileID: 3071830612214637549}
   - component: {fileID: 3071830612214637548}
   - component: {fileID: 3071830612214637566}
+  - component: {fileID: 3071830612214637549}
   m_Layer: 11
   m_Name: CowP3
   m_TagString: CowP3
@@ -4976,9 +4816,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4990,9 +4834,9 @@ GameObject:
   - component: {fileID: 3071830612215005180}
   - component: {fileID: 3071830612211580892}
   - component: {fileID: 3071830612212710684}
-  - component: {fileID: 3071830612214637547}
   - component: {fileID: 3071830612214637546}
   - component: {fileID: 3071830612214637565}
+  - component: {fileID: 3071830612214637547}
   m_Layer: 12
   m_Name: CowP4
   m_TagString: CowP4
@@ -5025,9 +4869,9 @@ GameObject:
   - component: {fileID: 3071830612215005182}
   - component: {fileID: 3071830612211580894}
   - component: {fileID: 3071830612212710686}
-  - component: {fileID: 3071830612214637545}
   - component: {fileID: 3071830612214637544}
   - component: {fileID: 3071830612214637564}
+  - component: {fileID: 3071830612214637545}
   m_Layer: 13
   m_Name: CowP5
   m_TagString: CowP5
@@ -5044,9 +4888,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637536
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5070,9 +4918,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637538
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5096,9 +4948,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637540
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5122,9 +4978,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637542
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5148,9 +5008,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637544
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5174,9 +5038,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637546
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5200,9 +5068,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637548
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5226,9 +5098,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637550
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5252,9 +5128,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3071830612214637528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68bbb7f55980c54e93c2688d1f94772, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f053f10f1365564f8f1ebcc0f011025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSnapped: 0
+  snapSpeed: 0
+  snapPercentageValeo: 100
+  snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!54 &3071830612214637552
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5554,7 +5434,7 @@ Transform:
   - {fileID: 3071830612215005156}
   - {fileID: 3071830612215005158}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
 --- !u!4 &3071830612215005152
 Transform:
