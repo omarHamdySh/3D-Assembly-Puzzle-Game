@@ -7,8 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneMappingNode : MonoBehaviour
 {
-    public SceneName sceneName;
-    public void ChangeScene() {
+    public SceneMappingManager.SceneName sceneName;
+    public void ChangeScene()
+    {
         SceneMappingManager.Instance.changeScene(sceneName);
+    }
+    public void setSceneToChangeTo()
+    {
+        SceneMappingManager.Instance.sceneName = sceneName;
     }
 }

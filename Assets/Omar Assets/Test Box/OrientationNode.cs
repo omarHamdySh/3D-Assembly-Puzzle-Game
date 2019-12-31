@@ -35,20 +35,24 @@ public class OrientationNode : MonoBehaviour
         Decremental
     }
 
+    public void Start()
+    {
+        orientationMode = OrientationMode.Rotational;
+    }
 
     /// <summary>
     /// 
     /// </summary>
     private void Update()
     {
-        if (!SelectionScript.instance.SelectedObject)
+        if (!SelectionManager.instance.selectedObject)
         {
             return;
         }
 
         adjustSnapStep();
 
-        toggleOrientationMode();
+        //toggleOrientationMode();
 
         OrientSelectedObject();
     }
@@ -80,7 +84,7 @@ public class OrientationNode : MonoBehaviour
     /// </summary>
     private void OrientSelectedObject()
     {
-        if (this.gameObject == SelectionScript.instance.SelectedObject)
+        if (this.gameObject == SelectionManager.instance.selectedObject)
         {
             switch (orientationMode)
             {
@@ -210,7 +214,7 @@ public class OrientationNode : MonoBehaviour
     public void orientSelectedObject(Vector3 axis, bool signed)
     {
 
-        if (this.gameObject == SelectionScript.instance.SelectedObject)
+        if (this.gameObject == SelectionManager.instance.selectedObject)
         {
             switch (orientationMode)
             {

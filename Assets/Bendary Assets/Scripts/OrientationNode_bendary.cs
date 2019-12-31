@@ -41,7 +41,7 @@ public class OrientationNode_bendary : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (!SelectionScript.instance.SelectedObject)
+        if (!SelectionManager.instance.selectedObject)
         {
             return;
         }
@@ -80,7 +80,7 @@ public class OrientationNode_bendary : MonoBehaviour
     /// </summary>
     private void OrientSelectedObject()
     {
-        if (this.gameObject == SelectionScript.instance.SelectedObject)
+        if (this.gameObject == SelectionManager.instance.selectedObject)
         {
             switch (orientationMode)
             {
@@ -210,7 +210,7 @@ public class OrientationNode_bendary : MonoBehaviour
     public void orientSelectedObject(bool x, bool y, bool z, bool sign)
     {
 
-        if (this.gameObject == SelectionScript.instance.SelectedObject)
+        if (this.gameObject == SelectionManager.instance.selectedObject)
         {
             switch (orientationMode)
             {

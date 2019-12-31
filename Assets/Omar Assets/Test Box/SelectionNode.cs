@@ -7,14 +7,14 @@ public class SelectionNode : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (SelectionScript.instance.SelectedObject)
-        {
-            SelectionScript.instance.SelectedObject.GetComponent<SelectionNode>().DisableSelectionOutline();
-        }
+        //if (SelectionScript.instance.SelectedObject)
+        //{
+        //    SelectionScript.instance.SelectedObject.GetComponent<SelectionNode>().DisableSelectionOutline();
+        //}
 
-        SelectionScript.instance.SelectedObject = gameObject;
+        //SelectionScript.instance.SelectedObject = gameObject;
 
-        ShowSelectionOutline();
+        //ShowSelectionOutline();
     }
     public void ShowSelectionOutline()
     {
@@ -25,4 +25,13 @@ public class SelectionNode : MonoBehaviour
     {
 
     }
+
+    public void select() {
+        SelectionManager.instance.selectedObject = gameObject;
+    }
+
+    public void unSelect() { 
+    
+    }
+
 }

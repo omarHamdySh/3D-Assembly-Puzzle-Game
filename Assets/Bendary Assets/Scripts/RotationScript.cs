@@ -39,13 +39,13 @@ public class RotationScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (SelectionScript.instance.SelectedObject)
+        if (SelectionManager.instance.selectedObject)
         {
-            SelectionScript.instance.SelectedObject.GetComponent<RotationScript>().IsSelected = false;
-            SelectionScript.instance.SelectedObject.GetComponent<RotationScript>().DisableSelectionOutline();
+            SelectionManager.instance.selectedObject.GetComponent<RotationScript>().IsSelected = false;
+            SelectionManager.instance.selectedObject.GetComponent<RotationScript>().DisableSelectionOutline();
         }
 
-        SelectionScript.instance.SelectedObject = gameObject;
+        SelectionManager.instance.selectedObject = gameObject;
 
         IsSelected = true;
         ShowSelectionOutline();
