@@ -6,7 +6,7 @@ public class Drage3DObjects : MonoBehaviour
 {
     private Vector3 mOffset;
     private float mZCoord;
-
+    [HideInInspector] public bool isDragged;
     private void OnMouseDown()
     {
         mZCoord = Camera.main.WorldToScreenPoint(transform.position).z;
@@ -16,12 +16,18 @@ public class Drage3DObjects : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (SnapZone3D_Omar.snapOnMouseUp)
+        {
+            isDragged = true;
+        }
+
         transform.position = GetMousePos() + mOffset;
     }
 
     private void OnMouseUp()
     {
         // Check the object if it on the right postion or not if make the snapzone code
+        isDragged = false;
     }
 
     private Vector3 GetMousePos()

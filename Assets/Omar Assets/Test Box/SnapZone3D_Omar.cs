@@ -12,7 +12,9 @@ public class SnapZone3D_Omar : MonoBehaviour
     [SerializeField] private float snapSpeed;
     [SerializeField] private int snapPercentageValeo = 5;
 
-    public Vector3 snapDirectionFrom;
+    public static bool snapOnMouseUp=true; 
+    
+        public Vector3 snapDirectionFrom;
 
     private MeshRenderer meshRenderer;
     private Collider myCollider;
@@ -26,7 +28,7 @@ public class SnapZone3D_Omar : MonoBehaviour
 
     private void OnTriggerStay(Collider collision)
     {
-        if (!isSnapping)
+        if (!isSnapping && !collision.gameObject.GetComponent<Drage3DObjects>().isDragged)
         {
             tryToSnap(collision);
         }
@@ -37,7 +39,7 @@ public class SnapZone3D_Omar : MonoBehaviour
     {
         OnSnapHover(other.gameObject);
         if(isValidToSnap)
-        evaluateSnapDirection(other.gameObject.transform.position-this.transform.position);
+            evaluateSnapDirection(other.gameObject.transform.position-this.transform.position);
     }
 
     private void OnTriggerExit(Collider other)
@@ -56,7 +58,6 @@ public class SnapZone3D_Omar : MonoBehaviour
 
     private bool checkOrientation(GameObject snappingGameObject)
     {
-
         if (this.gameObject.transform.rotation == snappingGameObject.transform.rotation)
             return true;
         else
@@ -65,7 +66,6 @@ public class SnapZone3D_Omar : MonoBehaviour
 
     IEnumerator snapSmoothly(GameObject snappedObject)
     {
-
         while (snappedObject.transform.position != this.transform.position)
         {
             yield return new WaitForSeconds(snapSpeed);
@@ -75,7 +75,6 @@ public class SnapZone3D_Omar : MonoBehaviour
                      this.transform.position,
                      snapPercentageValeo * 0.1f
                 );
-
             //snappedObject.transform.Translate(snappedObject.transform.position, snapPercentageValeo);
         }
         yield return null;

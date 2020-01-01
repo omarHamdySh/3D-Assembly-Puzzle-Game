@@ -14,10 +14,6 @@ using UnityEngine.UI;
 public enum GameItemName
 {
     MK2 = 1,
-    _9MM = 2,
-    G36 = 3,
-    MP5 = 4,
-
 }
 // The levels that player have to pass
 //Must intialize ASAP  ****************************************IMPORTANT*****************************
