@@ -38,6 +38,7 @@ public class GameManagerAssist : MonoBehaviour
         {
 
         }
+
     }
 
     /// <summary>
@@ -68,11 +69,11 @@ public class GameManagerAssist : MonoBehaviour
 
     public void nicelyRandomizePosition(Transform piece)
     {
-
+        piece.position = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-2f, 2f));
     }
 
-    public void roughlyRandomizePosition(Transform piece) { 
-    
+    public void roughlyRandomizePosition(Transform piece) {
+        
     }
     public void randomizeRotation(Transform piece)
     {

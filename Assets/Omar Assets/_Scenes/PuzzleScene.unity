@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &60922490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &110805787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,6 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &151691263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &203183685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f321730d69a874bb5d775c55d28dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFollowingSelectedObject: 0
 --- !u!4 &336053980
 Transform:
   m_ObjectHideFlags: 0
@@ -1457,6 +1462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &445661956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,6 +1702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &500671497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2044,6 +2051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &723952254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,6 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &737029920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2522,6 +2531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &777131089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,6 +2771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &780827839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3070,6 +3081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &1293096747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3309,6 +3321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &1328355385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3421,7 +3434,7 @@ MonoBehaviour:
   maxHorizontalRotationAngle: 80
   minHorizontalRotationAngle: -80
   maxVerticalRotationAngle: 100
-  minVerticalRotationAngle: -20
+  minVerticalRotationAngle: -90
   cameraDisabled: 0
 --- !u!81 &1343491423
 AudioListener:
@@ -3440,8 +3453,8 @@ Camera:
   m_GameObject: {fileID: 1343491420}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.5678902, g: 0.29703632, b: 0.7075472, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -3654,6 +3667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &1384081381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3734,7 +3748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1718283490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3747,6 +3761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &1718283491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4088,6 +4103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &1754304401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4437,6 +4453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &1955106377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4676,6 +4693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &1963216138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5027,6 +5045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86695fd7c99a2cf46b9142ac9cf7baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragged: 0
 --- !u!114 &2100469841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5915,7 +5934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!54 &3071830612214637484
 Rigidbody:
@@ -6108,7 +6127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637514
 GameObject:
@@ -6145,7 +6164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637516
 GameObject:
@@ -6182,7 +6201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637518
 GameObject:
@@ -6219,7 +6238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637520
 GameObject:
@@ -6291,7 +6310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637524
 GameObject:
@@ -6363,7 +6382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637528
 GameObject:
@@ -6435,7 +6454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!1 &3071830612214637532
 GameObject:
@@ -6507,7 +6526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637536
 MeshCollider:
@@ -6537,7 +6556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637538
 MeshCollider:
@@ -6567,7 +6586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637540
 MeshCollider:
@@ -6597,7 +6616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637542
 MeshCollider:
@@ -6627,7 +6646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637544
 MeshCollider:
@@ -6657,7 +6676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637546
 MeshCollider:
@@ -6687,7 +6706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637548
 MeshCollider:
@@ -6717,7 +6736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!64 &3071830612214637550
 MeshCollider:
@@ -6747,7 +6766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSnapped: 0
   snapSpeed: 0
-  snapPercentageValeo: 100
+  snapPercentageValeo: 20
   snapDirectionFrom: {x: 0, y: 0, z: 0}
 --- !u!54 &3071830612214637552
 Rigidbody:

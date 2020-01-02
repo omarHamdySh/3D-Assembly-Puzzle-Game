@@ -22,7 +22,7 @@ public class CameraOrbit : MonoBehaviour
     public float maxHorizontalRotationAngle = 80;
     public float minHorizontalRotationAngle = -80;
     public float maxVerticalRotationAngle = 100;
-    public float minVerticalRotationAngle = -20;
+    public float minVerticalRotationAngle = -90;
 
 
 
@@ -55,8 +55,8 @@ public class CameraOrbit : MonoBehaviour
                     _LocalRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
 
                     // Clamp the y rotation to horizon and not flipping over at the top;
-                    _LocalRotation.x = !horizontalRotationIsntLimited ? Mathf.Clamp(_LocalRotation.x, -80, 80) : _LocalRotation.x;
-                    _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, -20, 100);
+                    _LocalRotation.x = !horizontalRotationIsntLimited ? Mathf.Clamp(_LocalRotation.x, minHorizontalRotationAngle, maxHorizontalRotationAngle) : _LocalRotation.x;
+                    _LocalRotation.y = Mathf.Clamp(_LocalRotation.y, minVerticalRotationAngle, maxVerticalRotationAngle);
                 }
 
                 //Actual Camera Rig Transformations
