@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964127, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -202,6 +202,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snap_Cube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022057064506790568, guid: 4e20a1f4fb34b924c95014ea395b6cad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arm
       objectReference: {fileID: 0}
     - target: {fileID: 5022057064506790573, guid: 4e20a1f4fb34b924c95014ea395b6cad,
         type: 3}
@@ -432,6 +437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snap_Cube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022057064506790568, guid: 4e20a1f4fb34b924c95014ea395b6cad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Leg
       objectReference: {fileID: 0}
     - target: {fileID: 5022057064506790573, guid: 4e20a1f4fb34b924c95014ea395b6cad,
         type: 3}
@@ -669,6 +679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snap_Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022057064506790568, guid: 4e20a1f4fb34b924c95014ea395b6cad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Head
       objectReference: {fileID: 0}
     - target: {fileID: 5022057064506790573, guid: 4e20a1f4fb34b924c95014ea395b6cad,
         type: 3}
