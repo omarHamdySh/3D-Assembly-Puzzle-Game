@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
     //-------------------------------------------
     public GameLevelsNames currentLevel;
     internal GameObject selectedItem;
+    internal bool isLevelActive;
     #endregion
 
 
@@ -332,5 +333,14 @@ public class GameManager : MonoBehaviour
         currentLevel = (GameLevelsNames)levelNo;
     }
 
+    public void startLevelTime() {
+
+        isLevelActive = true;
+    }
+
+    public void stopAndResetGameTime() {
+        isLevelActive = false;
+        timeManager.resetTime();
+    }
     #endregion
 }

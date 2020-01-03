@@ -14,6 +14,7 @@ public class GameLogicManager : MonoBehaviour
     {
         if (GameManager.Instance)
         {
+            GameManager.Instance.startLevelTime();
             SnapZone3D_Omar[] snapZones = GameObject.FindObjectsOfType<SnapZone3D_Omar>();
             foreach (var snapZone in snapZones)
             {

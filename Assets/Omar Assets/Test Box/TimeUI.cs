@@ -13,6 +13,6 @@ public class TimeUI : MonoBehaviour
     void Update()
     {
         if(GameManager.Instance)
-            timeText.text = "Time(sec):" + Mathf.Floor(GameManager.Instance.timeManager.gameTime.realSecond);
+            timeText.text = "Time(sec):" + (Mathf.Floor(GameManager.Instance.timeManager.gameTime.realSecond)+1);
     }
 }
