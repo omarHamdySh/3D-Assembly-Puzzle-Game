@@ -9678,7 +9678,7 @@ GameObject:
   - component: {fileID: 198386007183116682}
   - component: {fileID: 199075056680358086}
   m_Layer: 0
-  m_Name: fireworks sample
+  m_Name: fireworks sample 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
