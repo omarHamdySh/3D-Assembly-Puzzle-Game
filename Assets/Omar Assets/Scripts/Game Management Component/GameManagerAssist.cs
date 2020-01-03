@@ -101,6 +101,7 @@ public class GameManagerAssist : MonoBehaviour
             piece.GetComponent<MeshCollider>().enabled = true;
         }
         snapZones.gameObject.SetActive(true);
+        GetComponent<GameLogicManager>().fetchAllSnapZones();
     }
 
     public void nicelyRandomizePosition(Transform piece)

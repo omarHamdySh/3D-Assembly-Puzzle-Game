@@ -44,7 +44,7 @@ public class CameraOrbit : MonoBehaviour
             cameraDisabled = !cameraDisabled;
         }
 
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButton(1))
         {
             if (!cameraDisabled)
             {
