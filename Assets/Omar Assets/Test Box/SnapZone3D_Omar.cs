@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public delegate void name(float timeUnitValue);
+public delegate void SnappingEvent(SnapZone3D_Omar snapZone);
 
 public class SnapZone3D_Omar : MonoBehaviour
 {
@@ -20,6 +20,7 @@ public class SnapZone3D_Omar : MonoBehaviour
     private MeshRenderer meshRenderer;
     private Collider myCollider;
 
+    public SnappingEvent OnSnappedEvent, OnUnSnappedEvent;
 
     [Header("Snap Events")]
     public UnityEvent OnSnapEnter, OnSnapExit, OnSnapping, OnUnSnapping, OnSnapped, OnUnSnapped;
@@ -194,12 +195,17 @@ public class SnapZone3D_Omar : MonoBehaviour
         snappedObject.GetComponent<Collider>().enabled = false;
 
         OnSnapped.Invoke();
+
+        if (OnSnappedEvent != null)
+            OnSnappedEvent(this);
     }
 
     private void fireUnSnappedEvent(GameObject unSnappedObject)
     {
         isSnapped = false;
         OnUnSnapped.Invoke();
+        if (OnUnSnappedEvent != null)
+            OnUnSnappedEvent(this);
     }
 
     private void fireOnSnappingEvent(GameObject snappedObject)

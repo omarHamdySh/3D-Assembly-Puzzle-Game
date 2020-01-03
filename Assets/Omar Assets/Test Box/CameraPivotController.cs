@@ -34,5 +34,12 @@ public class CameraPivotController : MonoBehaviour
         isFollowingSelectedObject = false;
     }
 
+    public void resetToFrontView() {
+        isFollowingSelectedObject = false;
+        this.transform.position = Vector3.zero;
+        this.transform.rotation = Quaternion.identity;
+    }
+
+
 
 }
