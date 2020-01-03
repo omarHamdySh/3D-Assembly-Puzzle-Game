@@ -39,6 +39,7 @@ public delegate void TimeEvents(float timeUnitValue);
 public delegate bool GamePlayStatesEvents(IGameplayState otherState);
 
 [RequireComponent(typeof(GameplayFSMManager), typeof(TimeManager), typeof(SceneMappingManager))]
+[RequireComponent(typeof(AudioManager))]
 public class GameManager : MonoBehaviour
 {
 
@@ -57,6 +58,9 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public GameplayFSMManager gameplayFSMManager;                       //reference for the state machine controller to access his state
+
+    [HideInInspector]
+    public AudioManager audioManager;
 
     //LevelManager
     public bool isTesting;

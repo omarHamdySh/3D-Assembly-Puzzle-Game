@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public delegate void name(float timeUnitValue);
 
@@ -10,15 +11,18 @@ public class SnapZone3D_Omar : MonoBehaviour
     public bool isSnapped;
     private bool isSnapping, isUnSnapping, isValidToSnap;
     [SerializeField] private float snapSpeed;
-    [SerializeField] private int snapPercentageValeo = 5;
+    [SerializeField] private int snapPercentageValue = 5;
 
-    public static bool snapOnMouseUp=true; 
-    
-        public Vector3 snapDirectionFrom;
+    public static bool snapOnMouseUp = true;
+
+    public Vector3 snapDirectionFrom;
 
     private MeshRenderer meshRenderer;
     private Collider myCollider;
 
+
+    [Header("Snap Events")]
+    public UnityEvent OnSnapEnter, OnSnapExit, OnSnapping, OnUnSnapping, OnSnapped, OnUnSnapped;
     public void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -37,14 +41,20 @@ public class SnapZone3D_Omar : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        OnSnapHover(other.gameObject);
-        if(isValidToSnap)
-            evaluateSnapDirection(other.gameObject.transform.position-this.transform.position);
+        if (gameObject.tag == other.gameObject.tag)
+        {
+            fireOnSnapEnterEvent(other.gameObject);
+            if (isValidToSnap)
+                evaluateSnapDirection(other.gameObject.transform.position - this.transform.position);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-
+        if (gameObject.tag == other.gameObject.tag)
+        {
+            fireOnSnapExitEvent(other.gameObject);
+        }
     }
 
     private void tryToSnap(Collider collision)
@@ -73,7 +83,7 @@ public class SnapZone3D_Omar : MonoBehaviour
                  snappedObject.transform.position = Vector3.Lerp(
                      snappedObject.transform.position,
                      this.transform.position,
-                     snapPercentageValeo * 0.1f
+                     snapPercentageValue * 0.1f
                 );
             //snappedObject.transform.Translate(snappedObject.transform.position, snapPercentageValeo);
         }
@@ -88,12 +98,12 @@ public class SnapZone3D_Omar : MonoBehaviour
             Mathf.Abs(differenceInDirection.x) >
             Mathf.Abs(differenceInDirection.z))
         {
-            if (differenceInDirection.x>0)
+            if (differenceInDirection.x > 0)
             {
                 snapDirectionFrom = Vector3.right;
 
             }
-            else if (differenceInDirection.x<0)
+            else if (differenceInDirection.x < 0)
             {
                 snapDirectionFrom = -Vector3.right;
             }
@@ -115,9 +125,9 @@ public class SnapZone3D_Omar : MonoBehaviour
             }
 
         }
-        else if (Mathf.Abs(differenceInDirection.z) > 
+        else if (Mathf.Abs(differenceInDirection.z) >
             Mathf.Abs(differenceInDirection.y)
-            && Mathf.Abs(differenceInDirection.z) > 
+            && Mathf.Abs(differenceInDirection.z) >
             Mathf.Abs(differenceInDirection.x))
         {
             if (differenceInDirection.z > 0)
@@ -142,34 +152,34 @@ public class SnapZone3D_Omar : MonoBehaviour
     //Snap the game object into your valid location and do the effects of it.s
     private void snap(GameObject snappedObject)
     {
-        OnSnapping(snappedObject);
+        fireOnSnappingEvent(snappedObject);
         StartCoroutine(snapSmoothly(snappedObject));
-        OnSnapped(snappedObject);
+        fireOnSnappedEvent(snappedObject);
     }
 
     //Push the game object out side the snap zone.
     private void unSnap(GameObject unSnappedObject)
     {
-        OnUnSnapping(unSnappedObject);
-        unSnappedObject.transform.position += snapDirectionFrom *2; 
-        OnUnSnapped(unSnappedObject);
+        fireOnUnSnappingEvent(unSnappedObject);
+        unSnappedObject.transform.position += snapDirectionFrom * 2;
+        fireUnSnappedEvent(unSnappedObject);
     }
 
-    private void OnSnapHover(GameObject snappedObject)
+    private void fireOnSnapEnterEvent(GameObject snappedObject)
     {
+        OnSnapEnter.Invoke();
         //Play Hovering Animation
 
         //Check wheather it is in the valid orientation to be snapped or not.
-        if (gameObject.tag == snappedObject.gameObject.tag)
-            this.isValidToSnap = checkOrientation(snappedObject.gameObject);
+        this.isValidToSnap = checkOrientation(snappedObject.gameObject);
     }
 
-    private void OnSnapExit(GameObject unSnappedObject)
+    private void fireOnSnapExitEvent(GameObject unSnappedObject)
     {
-
+        OnSnapExit.Invoke();
     }
 
-    private void OnSnapped(GameObject snappedObject)
+    private void fireOnSnappedEvent(GameObject snappedObject)
     {
 
         isSnapping = false;
@@ -183,21 +193,25 @@ public class SnapZone3D_Omar : MonoBehaviour
         //Disable snapped game object collider in order to be un movable.
         snappedObject.GetComponent<Collider>().enabled = false;
 
+        OnSnapped.Invoke();
     }
 
-    private void OnUnSnapped(GameObject unSnappedObject)
+    private void fireUnSnappedEvent(GameObject unSnappedObject)
     {
         isSnapped = false;
+        OnUnSnapped.Invoke();
     }
 
-    private void OnSnapping(GameObject snappedObject)
+    private void fireOnSnappingEvent(GameObject snappedObject)
     {
         isSnapping = true;
+        OnSnapping.Invoke();
     }
 
-    private void OnUnSnapping(GameObject snappedObject)
+    private void fireOnUnSnappingEvent(GameObject snappedObject)
     {
         isUnSnapping = true;
+        OnUnSnapping.Invoke();
     }
 
 

@@ -7,9 +7,11 @@ public class CameraPivotController : MonoBehaviour
     public bool isFollowingSelectedObject = true;
     private void Update()
     {
-        if (SelectionManager.instance.selectedObject && isFollowingSelectedObject)
+        if (SelectionManager.instance.selectedObject && isFollowingSelectedObject  )
         {
-            this.transform.position = SelectionManager.instance.selectedObject.transform.position;
+            if (!SelectionManager.instance.selectedObject.GetComponent<Drage3DObjects>().isDragged)
+                this.transform.position = SelectionManager.instance.selectedObject.transform.position;
+
         }
     }
 
@@ -20,7 +22,8 @@ public class CameraPivotController : MonoBehaviour
             this.transform.position = SelectionManager.instance.selectedObject.transform.position;
             isFollowingSelectedObject = true;
         }
-        else {
+        else
+        {
             this.resetFocus();
         }
     }
