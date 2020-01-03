@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Omar Assets/_Scenes/PuzzleScene.unity
-    guid: c3b0cc74be25ea4499bc6e6b3e76ea31
+    path: Assets/Bendary Assets/_Scenes/HomeScene.unity
+    guid: 13e902f0ea67ac045a4da9cee31c48c8
   - enabled: 1
-    path: Assets/Omar Assets/_Scenes/HomeScene.unity
-    guid: 5c81e338ff3bdd045ae61f911c974893
+    path: Assets/Bendary Assets/_Scenes/PuzzleScene.unity
+    guid: f8c91fd94a514424992a6573fadc57bc
   m_configObjects: {}
