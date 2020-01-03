@@ -195,14 +195,17 @@ public class SnapZone3D_Omar : MonoBehaviour
         snappedObject.GetComponent<Collider>().enabled = false;
 
         OnSnapped.Invoke();
-        OnSnappedEvent(this);
+
+        if (OnSnappedEvent != null)
+            OnSnappedEvent(this);
     }
 
     private void fireUnSnappedEvent(GameObject unSnappedObject)
     {
         isSnapped = false;
         OnUnSnapped.Invoke();
-       // OnUnSnappedEvent(this);
+        if (OnUnSnappedEvent != null)
+            OnUnSnappedEvent(this);
     }
 
     private void fireOnSnappingEvent(GameObject snappedObject)

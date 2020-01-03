@@ -12,6 +12,7 @@ public class TimeUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeText.text = "Time in Seconds:" + GameManager.Instance.timeManager.gameTime.realSecond;
+        if(GameManager.Instance)
+            timeText.text = "Time(sec):" + Mathf.Floor(GameManager.Instance.timeManager.gameTime.realSecond);
     }
 }

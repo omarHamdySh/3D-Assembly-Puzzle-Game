@@ -184,6 +184,7 @@ public class GameManager : MonoBehaviour
 
     public void OnSecondChange()
     {
+        if(OnRealSecondChanged!=null)
         OnRealSecondChanged(timeManager.gameTime.realSecond);
     }
 
@@ -195,7 +196,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnMinuteChange()
     {
-        OnRealMinuteChanged(timeManager.gameTime.realMinute);
+        if (OnRealMinuteChanged != null)
+            OnRealMinuteChanged(timeManager.gameTime.realMinute);
     }
 
     /// <summary>
@@ -206,7 +208,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnGameDayChange()
     {
-        OnGameDayChanged(timeManager.gameTime.gameDay);
+        if (OnGameDayChanged != null)
+            OnGameDayChanged(timeManager.gameTime.gameDay);
     }
 
     /// <summary>
@@ -217,7 +220,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnGameHourChange()
     {
-        OnGameHourChanged(timeManager.gameTime.gameHour);
+        if (OnGameHourChanged != null)
+            OnGameHourChanged(timeManager.gameTime.gameHour);
     }
     #endregion
 

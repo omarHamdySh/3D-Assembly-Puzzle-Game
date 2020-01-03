@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 110980456}
   - component: {fileID: 110980455}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: '---GameManager---'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba916e4d270bd045875755b607baaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalGameDays: 0
+  TotalGameDays: 10
   gameTime:
     gameHour: 0
     gameDay: 0

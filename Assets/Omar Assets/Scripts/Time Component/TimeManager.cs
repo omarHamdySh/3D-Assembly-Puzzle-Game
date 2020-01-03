@@ -248,7 +248,7 @@ public class TimeManager : MonoBehaviour
 
 
     [HideInInspector]
-    public bool isUpdating;
+    public bool isUpdating = true;
     public List<EventsTime> eventsTime = new List<EventsTime>();
 
     private void Start()
