@@ -118,9 +118,9 @@ public class GameManagerAssist : MonoBehaviour
     public void randomizeRotation(Transform piece)
     {
         int MaxAngleValue = 360 / RotationAngle;
-        int RandomRotationX = Random.Range(0, MaxAngleValue);
-        int RandomRotationY = Random.Range(0, MaxAngleValue);
-        int RandomRotationZ = Random.Range(0, MaxAngleValue);
+        int RandomRotationX = Random.Range(0, MaxAngleValue + 1);
+        int RandomRotationY = Random.Range(0, MaxAngleValue + 1);
+        int RandomRotationZ = Random.Range(0, MaxAngleValue + 1);
         Vector3 randomRotation = new Vector3(RotationAngle * RandomRotationX, RotationAngle * RandomRotationY, RotationAngle * RandomRotationZ);
         piece.rotation = Quaternion.Euler(randomRotation);
     }
