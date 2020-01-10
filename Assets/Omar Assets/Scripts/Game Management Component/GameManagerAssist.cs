@@ -11,6 +11,7 @@ public class GameManagerAssist : MonoBehaviour
     [Header("Attributes")]
     public GameObject snapZones;
     public GameObject assemblyPieces;
+    [SerializeField] private int RotationAngle = 90;
     [SerializeField] private float slowRandTime = 0.5f;
 
 
@@ -111,10 +112,16 @@ public class GameManagerAssist : MonoBehaviour
 
     public void roughlyRandomizePosition(Transform piece)
     {
+        piece.position = new Vector3(Random.Range(-4f, 4f), Random.Range(-4f, 4f), Random.Range(-4f, 4f));
 
     }
     public void randomizeRotation(Transform piece)
     {
-
+        int MaxAngleValue = 360 / RotationAngle;
+        int RandomRotationX = Random.Range(0, MaxAngleValue);
+        int RandomRotationY = Random.Range(0, MaxAngleValue);
+        int RandomRotationZ = Random.Range(0, MaxAngleValue);
+        Vector3 randomRotation = new Vector3(RotationAngle * RandomRotationX, RotationAngle * RandomRotationY, RotationAngle * RandomRotationZ);
+        piece.rotation = Quaternion.Euler(randomRotation);
     }
 }

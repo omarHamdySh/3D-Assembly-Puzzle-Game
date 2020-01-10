@@ -203,7 +203,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 19.15
+  m_fontSize: 18.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2390,18 +2390,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596524758}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d219f9ec4f0aadd4188c465f0faca2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapZones: {fileID: 596524758}
-  assemblyPieces: {fileID: 0}
+  snapZones: {fileID: 3071830612214637482}
+  assemblyPieces: {fileID: 596524758}
   slowRandTime: 0.5
   hours: 0
   minutes: 0
   seconds: 5
-  timerTxt: {fileID: 0}
+  timerTxt: {fileID: 40676079}
 --- !u!1 &723952243
 GameObject:
   m_ObjectHideFlags: 0
