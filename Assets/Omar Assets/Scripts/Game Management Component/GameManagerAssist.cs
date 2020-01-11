@@ -109,12 +109,13 @@ public class GameManagerAssist : MonoBehaviour
     {
         piece.position = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-2f, 2f));
     }
-
+    //March implement
     public void roughlyRandomizePosition(Transform piece)
     {
         piece.position = new Vector3(Random.Range(-4f, 4f), Random.Range(-4f, 4f), Random.Range(-4f, 4f));
 
     }
+    //March implement
     public void randomizeRotation(Transform piece)
     {
         int MaxAngleValue = 360 / RotationAngle;
