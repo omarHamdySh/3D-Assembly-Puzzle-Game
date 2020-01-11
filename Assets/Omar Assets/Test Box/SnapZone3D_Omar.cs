@@ -67,12 +67,22 @@ public class SnapZone3D_Omar : MonoBehaviour
             unSnap(collision.gameObject);
     }
 
+    //March modify
     private bool checkOrientation(GameObject snappingGameObject)
     {
         if (this.gameObject.transform.rotation == snappingGameObject.transform.rotation)
+        {
             return true;
-        else
+        }
+        else if (this.gameObject.transform.rotation.y == -snappingGameObject.transform.rotation.y)
+        {
+            return true;
+        }
+        else 
+        {
             return false;
+        }
+          
     }
 
     IEnumerator snapSmoothly(GameObject snappedObject)
