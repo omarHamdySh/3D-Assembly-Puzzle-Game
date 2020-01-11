@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public struct Timer
+{
+    public int EasyTimer;
+    public int NormalTimer;
+    public int HardTimer;
+
+}
 public class GameManagerAssist : MonoBehaviour
 {
     bool isSceneJustLoaded;
@@ -13,12 +21,15 @@ public class GameManagerAssist : MonoBehaviour
     public GameObject assemblyPieces;
     [SerializeField] private int RotationAngle = 90;
     [SerializeField] private float slowRandTime = 0.5f;
-    public bool CountDownTimer;
-
+  
     #region CountDown Timer
     [SerializeField] private int hours = 0, minutes = 0, seconds = 5;
     [SerializeField] private TextMeshProUGUI timerTxt;
     private bool takingAway;
+    private bool gameStard = false;
+
+
+    public Timer LevelTimer;
     #endregion
 
     private void Awake()
@@ -49,7 +60,7 @@ public class GameManagerAssist : MonoBehaviour
         {
             StartCoroutine(TakeDownTimer());
         }
-        else if (seconds == 0 && takingAway == false)
+        else if (seconds == 0 && takingAway == false && !gameStard)
         {
             takingAway = true;
             timerTxt.gameObject.SetActive(false);
@@ -58,9 +69,12 @@ public class GameManagerAssist : MonoBehaviour
                 randomize();
             }
         }
+        else if(seconds == 0 && !takingAway && gameStard)
+        {
+            GameOver();
+        }
 
     }
-
     IEnumerator TakeDownTimer()
     {
         takingAway = true;
@@ -70,6 +84,10 @@ public class GameManagerAssist : MonoBehaviour
         takingAway = false;
     }
    
+    public void GameOver()
+    {
+
+    }
  
     /// <summary>
     /// This method is goint to randomize the assembly pieces according to the level of difficulty
@@ -104,7 +122,9 @@ public class GameManagerAssist : MonoBehaviour
         }
         snapZones.gameObject.SetActive(true);
         GetComponent<GameLogicManager>().fetchAllSnapZones();
+        CheckLevel();
     }
+  
 
     public void nicelyRandomizePosition(Transform piece)
     {
@@ -126,4 +146,31 @@ public class GameManagerAssist : MonoBehaviour
         Vector3 randomRotation = new Vector3(RotationAngle * RandomRotationX, RotationAngle * RandomRotationY, RotationAngle * RandomRotationZ);
         piece.rotation = Quaternion.Euler(randomRotation);
     }
+
+    #region March Update
+    private void CheckLevel()
+    {
+        switch (GameManager.Instance.currentLevel)
+        {
+            case GameLevelsNames.Level_0:
+                StartCountDown(LevelTimer.EasyTimer);
+                break;
+            case GameLevelsNames.Level_1:
+                StartCountDown(LevelTimer.NormalTimer);
+                break;
+            case GameLevelsNames.Level_2:
+                StartCountDown(LevelTimer.HardTimer);
+                break;
+            default:
+                break;
+        }
+    }
+    private void StartCountDown(int levelTimer)
+    {
+        seconds = levelTimer;
+        takingAway = false;
+        timerTxt.text = /*hours.ToString("00") + ":" + minutes.ToString("00") + ":" +*/ seconds.ToString("00");
+        timerTxt.gameObject.SetActive(true);
+    }
+    #endregion
 }

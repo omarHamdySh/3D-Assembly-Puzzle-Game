@@ -203,7 +203,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.95
+  m_fontSize: 18.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -574,11 +574,14 @@ MonoBehaviour:
   assemblyPieces: {fileID: 596524758}
   RotationAngle: 90
   slowRandTime: 0.5
-  CountDownTimer: 0
   hours: 0
   minutes: 0
   seconds: 5
   timerTxt: {fileID: 40676079}
+  LevelTimer:
+    EasyTimer: 180
+    NormalTimer: 300
+    HardTimer: 420
 --- !u!114 &101284884
 MonoBehaviour:
   m_ObjectHideFlags: 0
