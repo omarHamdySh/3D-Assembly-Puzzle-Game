@@ -26,8 +26,8 @@ public class GameManagerAssist : MonoBehaviour
     [SerializeField] private int hours = 0, minutes = 0, seconds = 5;
     [SerializeField] private TextMeshProUGUI timerTxt;
     private bool takingAway;
-    private bool gameStard = false;
-
+    private bool gameStarted = false;
+    public bool m_GameOver = false;
 
     public Timer LevelTimer;
     #endregion
@@ -39,6 +39,7 @@ public class GameManagerAssist : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_GameOver = false;
         timerTxt.text = /*hours.ToString("00") + ":" + minutes.ToString("00") + ":" +*/ seconds.ToString("00");
         snapZones.gameObject.SetActive(false);
     }
@@ -46,6 +47,18 @@ public class GameManagerAssist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (m_GameOver)
+        {
+            //To Restart
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                //Reset the level
+            }
+            else
+            {
+                return;
+            }
+        }
         if (isSceneJustLoaded)
         {
             framCounter++;
@@ -60,7 +73,7 @@ public class GameManagerAssist : MonoBehaviour
         {
             StartCoroutine(TakeDownTimer());
         }
-        else if (seconds == 0 && takingAway == false && !gameStard)
+        else if (seconds == 0 && takingAway == false && !gameStarted)
         {
             takingAway = true;
             timerTxt.gameObject.SetActive(false);
@@ -69,9 +82,9 @@ public class GameManagerAssist : MonoBehaviour
                 randomize();
             }
         }
-        else if(seconds == 0 && !takingAway && gameStard)
+        else if(seconds == 0 && !takingAway && gameStarted)
         {
-            GameOver();
+            m_GameOver = true;
         }
 
     }
@@ -122,6 +135,7 @@ public class GameManagerAssist : MonoBehaviour
         }
         snapZones.gameObject.SetActive(true);
         GetComponent<GameLogicManager>().fetchAllSnapZones();
+        //March
         CheckLevel();
     }
   
@@ -171,6 +185,7 @@ public class GameManagerAssist : MonoBehaviour
         takingAway = false;
         timerTxt.text = /*hours.ToString("00") + ":" + minutes.ToString("00") + ":" +*/ seconds.ToString("00");
         timerTxt.gameObject.SetActive(true);
+        gameStarted = true;
     }
     #endregion
 }

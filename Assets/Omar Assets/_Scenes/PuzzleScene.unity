@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.1463097, g: 0.26661313, b: 0.32008946, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -579,7 +579,7 @@ MonoBehaviour:
   seconds: 5
   timerTxt: {fileID: 40676079}
   LevelTimer:
-    EasyTimer: 180
+    EasyTimer: 10
     NormalTimer: 300
     HardTimer: 420
 --- !u!114 &101284884
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
-    textComponent: {fileID: 0}
+    textComponent: {fileID: 158705701}
     characterCount: 9
     spriteCount: 0
     spaceCount: 1
@@ -4751,7 +4751,7 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
-    textComponent: {fileID: 0}
+    textComponent: {fileID: 1437640931}
     characterCount: 10
     spriteCount: 0
     spaceCount: 1
