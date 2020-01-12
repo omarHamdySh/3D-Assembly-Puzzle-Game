@@ -49,15 +49,7 @@ public class GameManagerAssist : MonoBehaviour
     {
         if (m_GameOver)
         {
-            //To Restart
-            if (Input.GetKeyUp(KeyCode.R))
-            {
-                //Reset the level
-            }
-            else
-            {
-                return;
-            }
+            return;
         }
         if (isSceneJustLoaded)
         {
@@ -85,6 +77,7 @@ public class GameManagerAssist : MonoBehaviour
         else if(seconds == 0 && !takingAway && gameStarted)
         {
             m_GameOver = true;
+            this.gameObject.GetComponent<GameLogicManager>().GameOver();
         }
 
     }

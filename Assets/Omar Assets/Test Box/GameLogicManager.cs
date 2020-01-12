@@ -14,7 +14,10 @@ public class GameLogicManager : MonoBehaviour
     {
         
     }
-
+    public void GameOver()
+    {
+        PlayerLoses.Invoke();
+    }
     public void fetchAllSnapZones()
     {
         if (GameManager.Instance)

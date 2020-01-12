@@ -203,7 +203,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.95
+  m_fontSize: 18.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -572,11 +572,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapZones: {fileID: 3071830612214637482}
   assemblyPieces: {fileID: 596524758}
+  RotationAngle: 90
   slowRandTime: 0.5
   hours: 0
   minutes: 0
   seconds: 5
   timerTxt: {fileID: 40676079}
+  m_GameOver: 0
+  LevelTimer:
+    EasyTimer: 180
+    NormalTimer: 300
+    HardTimer: 420
 --- !u!114 &101284884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,7 +622,18 @@ MonoBehaviour:
         m_CallState: 2
   PlayerLoses:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   fireWorks: {fileID: 0}
   activeSnapZones: []
 --- !u!1 &110805776
@@ -2178,7 +2195,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596524759}
-  - component: {fileID: 596524760}
   m_Layer: 0
   m_Name: Cow Un ordered
   m_TagString: Untagged
@@ -2217,18 +2233,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
---- !u!114 &596524760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596524758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6a646f3a02f3048b5924779522359b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &723952243
 GameObject:
   m_ObjectHideFlags: 0
