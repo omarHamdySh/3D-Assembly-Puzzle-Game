@@ -30,18 +30,6 @@ public class SnapZone3D_Omar : MonoBehaviour
         myCollider = GetComponent<Collider>();
     }
 
-    private Mesh mesh;
-    public Mesh GetMesh
-    {
-        get
-        {
-            if(mesh == null)
-            {
-                mesh = this.gameObject.GetComponent<Mesh>();
-            }
-            return mesh;
-        }
-    }
     private void OnTriggerStay(Collider collision)
     {
         if (!isSnapping && !collision.gameObject.GetComponent<Drage3DObjects>().isDragged)
@@ -75,7 +63,11 @@ public class SnapZone3D_Omar : MonoBehaviour
     //March modify
     private bool checkOrientation(GameObject snappingGameObject)
     {
-        if (this.gameObject.transform.rotation == snappingGameObject.transform.rotation)
+        if (this.gameObject.transform.forward == snappingGameObject.transform.forward)
+        {
+            return true;
+        }
+        else if (CheckInverseRotation(snappingGameObject))
         {
             return true;
         }
@@ -87,32 +79,17 @@ public class SnapZone3D_Omar : MonoBehaviour
 
     private bool CheckInverseRotation(GameObject snappingGameObject)
     {
-        if (this.gameObject.transform.rotation.x + 180 == Mathf.Abs(snappingGameObject.transform.rotation.x))
+        if (Mathf.Abs(this.gameObject.transform.rotation.eulerAngles.x)  == snappingGameObject.transform.rotation.eulerAngles.x + 180)
         {
             return true;
-            if (this.gameObject.transform.rotation.y == Mathf.Abs(snappingGameObject.transform.rotation.y)
-                && this.gameObject.transform.rotation.z == snappingGameObject.transform.rotation.z)
-            {
-               
-            }
         }
-        else if (this.gameObject.transform.rotation.y + 180 == Mathf.Abs(snappingGameObject.transform.rotation.y))
+        else if (Mathf.Abs(this.gameObject.transform.rotation.eulerAngles.y) == snappingGameObject.transform.rotation.eulerAngles.y + +180)
         {
             return true;
-            if (this.gameObject.transform.rotation.z == snappingGameObject.transform.rotation.z
-              && this.gameObject.transform.rotation.x == snappingGameObject.transform.rotation.x)
-            {
-               
-            }
         }
-        else if (this.gameObject.transform.rotation.z + 180 == Mathf.Abs(snappingGameObject.transform.rotation.z))
+        else if (Mathf.Abs(this.gameObject.transform.rotation.eulerAngles.z) == snappingGameObject.transform.rotation.eulerAngles.z + +180)
         {
             return true;
-            if (this.gameObject.transform.rotation.y == snappingGameObject.transform.rotation.y
-                && this.gameObject.transform.rotation.x == snappingGameObject.transform.rotation.x)
-            {
-               
-            }
         }
 
         return false;
