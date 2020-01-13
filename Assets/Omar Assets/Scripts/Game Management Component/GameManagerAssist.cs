@@ -65,7 +65,7 @@ public class GameManagerAssist : MonoBehaviour
         {
             StartCoroutine(TakeDownTimer());
         }
-        else if (seconds == 0 && takingAway == false && !gameStarted)
+        else if (seconds == 0 && takingAway == false && !gameStarted && !m_GameOver)
         {
             takingAway = true;
             timerTxt.gameObject.SetActive(false);

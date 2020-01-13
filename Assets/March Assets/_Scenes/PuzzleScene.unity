@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 60922489}
   - component: {fileID: 60922488}
   - component: {fileID: 60922491}
-  m_Layer: 12
+  m_Layer: 27
   m_Name: CowP4
   m_TagString: CowP4
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60922479}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -678,6 +678,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Hints:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   fireWorks: {fileID: 0}
   activeSnapZones: []
 --- !u!1 &110805776
@@ -813,7 +827,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110805776}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -946,7 +960,7 @@ GameObject:
   - component: {fileID: 151691262}
   - component: {fileID: 151691261}
   - component: {fileID: 151691264}
-  m_Layer: 21
+  m_Layer: 27
   m_Name: CowP13
   m_TagString: CowP13
   m_Icon: {fileID: 0}
@@ -1059,7 +1073,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151691252}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -1551,7 +1565,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203183674}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -2020,7 +2034,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445661945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -2266,7 +2280,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500671486}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -2528,7 +2542,7 @@ GameObject:
   - component: {fileID: 723952253}
   - component: {fileID: 723952252}
   - component: {fileID: 723952255}
-  m_Layer: 24
+  m_Layer: 26
   m_Name: CowP16
   m_TagString: CowP16
   m_Icon: {fileID: 0}
@@ -2641,7 +2655,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723952243}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -2774,7 +2788,7 @@ GameObject:
   - component: {fileID: 737029919}
   - component: {fileID: 737029918}
   - component: {fileID: 737029921}
-  m_Layer: 23
+  m_Layer: 26
   m_Name: CowP15
   m_TagString: CowP15
   m_Icon: {fileID: 0}
@@ -2887,7 +2901,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737029909}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -3133,7 +3147,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777131078}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -3266,7 +3280,7 @@ GameObject:
   - component: {fileID: 780827838}
   - component: {fileID: 780827837}
   - component: {fileID: 780827840}
-  m_Layer: 22
+  m_Layer: 26
   m_Name: CowP14
   m_TagString: CowP14
   m_Icon: {fileID: 0}
@@ -3379,7 +3393,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780827828}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -4340,7 +4354,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293096735}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -4485,7 +4499,7 @@ GameObject:
   - component: {fileID: 1328355384}
   - component: {fileID: 1328355383}
   - component: {fileID: 1328355386}
-  m_Layer: 20
+  m_Layer: 28
   m_Name: CowP12
   m_TagString: CowP12
   m_Icon: {fileID: 0}
@@ -4598,7 +4612,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328355374}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -4951,7 +4965,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384081370}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -5987,7 +6001,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754304390}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -6230,7 +6244,7 @@ GameObject:
   - component: {fileID: 1955106376}
   - component: {fileID: 1955106375}
   - component: {fileID: 1955106378}
-  m_Layer: 11
+  m_Layer: 28
   m_Name: CowP3
   m_TagString: CowP3
   m_Icon: {fileID: 0}
@@ -6343,7 +6357,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955106366}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -6476,7 +6490,7 @@ GameObject:
   - component: {fileID: 1963216137}
   - component: {fileID: 1963216136}
   - component: {fileID: 1963216139}
-  m_Layer: 19
+  m_Layer: 26
   m_Name: CowP11
   m_TagString: CowP11
   m_Icon: {fileID: 0}
@@ -6589,7 +6603,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963216127}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -7240,7 +7254,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100469830}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -8265,7 +8279,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637480}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -8395,7 +8409,7 @@ GameObject:
   - component: {fileID: 3071830612214637505}
   - component: {fileID: 3071830612214637555}
   - component: {fileID: 3071830612214637519}
-  m_Layer: 22
+  m_Layer: 26
   m_Name: CowP14
   m_TagString: CowP14
   m_Icon: {fileID: 0}
@@ -8410,7 +8424,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637504}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -8430,7 +8444,7 @@ GameObject:
   - component: {fileID: 3071830612214637507}
   - component: {fileID: 3071830612214637554}
   - component: {fileID: 3071830612214637517}
-  m_Layer: 23
+  m_Layer: 26
   m_Name: CowP15
   m_TagString: CowP15
   m_Icon: {fileID: 0}
@@ -8445,7 +8459,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637506}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -8465,7 +8479,7 @@ GameObject:
   - component: {fileID: 3071830612214637509}
   - component: {fileID: 3071830612214637553}
   - component: {fileID: 3071830612214637515}
-  m_Layer: 24
+  m_Layer: 26
   m_Name: CowP16
   m_TagString: CowP16
   m_Icon: {fileID: 0}
@@ -8480,7 +8494,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637508}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -8515,7 +8529,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637510}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -8634,7 +8648,7 @@ GameObject:
   - component: {fileID: 3071830612214637529}
   - component: {fileID: 3071830612214637558}
   - component: {fileID: 3071830612214637531}
-  m_Layer: 19
+  m_Layer: 26
   m_Name: CowP11
   m_TagString: CowP11
   m_Icon: {fileID: 0}
@@ -8733,7 +8747,7 @@ GameObject:
   - component: {fileID: 3071830612214637525}
   - component: {fileID: 3071830612214637557}
   - component: {fileID: 3071830612214637527}
-  m_Layer: 20
+  m_Layer: 28
   m_Name: CowP12
   m_TagString: CowP12
   m_Icon: {fileID: 0}
@@ -8832,7 +8846,7 @@ GameObject:
   - component: {fileID: 3071830612214637521}
   - component: {fileID: 3071830612214637556}
   - component: {fileID: 3071830612214637523}
-  m_Layer: 21
+  m_Layer: 27
   m_Name: CowP13
   m_TagString: CowP13
   m_Icon: {fileID: 0}
@@ -8946,7 +8960,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637518}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9080,7 +9094,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637516}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9214,7 +9228,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637514}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9234,7 +9248,7 @@ GameObject:
   - component: {fileID: 3071830612214637548}
   - component: {fileID: 3071830612214637566}
   - component: {fileID: 3071830612214637549}
-  m_Layer: 11
+  m_Layer: 28
   m_Name: CowP3
   m_TagString: CowP3
   m_Icon: {fileID: 0}
@@ -9333,7 +9347,7 @@ GameObject:
   - component: {fileID: 3071830612214637546}
   - component: {fileID: 3071830612214637565}
   - component: {fileID: 3071830612214637547}
-  m_Layer: 12
+  m_Layer: 27
   m_Name: CowP4
   m_TagString: CowP4
   m_Icon: {fileID: 0}
@@ -9348,7 +9362,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637512}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9461,7 +9475,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637526}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9553,7 +9567,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637524}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9645,7 +9659,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637522}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9737,7 +9751,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637520}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9829,7 +9843,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637534}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -9921,7 +9935,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637532}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -10013,7 +10027,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637530}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -10105,7 +10119,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071830612214637528}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1

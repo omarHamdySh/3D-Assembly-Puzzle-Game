@@ -5,10 +5,10 @@ using UnityEngine.Events;
 
 public class GameLogicManager : MonoBehaviour
 {
-    public UnityEvent playerWins, PlayerLoses;
+    public UnityEvent playerWins, PlayerLoses, Hints;
     public GameObject fireWorks;
     public List<SnapZone3D_Omar> activeSnapZones;
-
+    private bool isWinning = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,8 @@ public class GameLogicManager : MonoBehaviour
     }
     public void GameOver()
     {
-        PlayerLoses.Invoke();
+        if(!isWinning)
+            PlayerLoses.Invoke();
     }
     public void fetchAllSnapZones()
     {
@@ -38,6 +39,7 @@ public class GameLogicManager : MonoBehaviour
         
         if (activeSnapZones.Count==0)
         {
+            isWinning = true;
             playerWins.Invoke();
         }
     }
