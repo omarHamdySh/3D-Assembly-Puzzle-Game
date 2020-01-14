@@ -63,33 +63,51 @@ public class SnapZone3D_Omar : MonoBehaviour
     //March modify
     private bool checkOrientation(GameObject snappingGameObject)
     {
-        if (this.gameObject.transform.forward == snappingGameObject.transform.forward)
+        //if (this.gameObject.transform.forward == snappingGameObject.transform.forward)
+        //{
+        //    return true;
+        //}
+        if (CheckRotation(snappingGameObject))
         {
             return true;
         }
-        else if (CheckInverseRotation(snappingGameObject))
-        {
-            return true;
-        }
+        //else if (CheckInverseRotation(snappingGameObject, -1))
+        //{
+        //    return true;
+        //}
 
          return false;
     }
 
     #region TestCode 
-
-    private bool CheckInverseRotation(GameObject snappingGameObject)
+    private bool CheckRotation(GameObject snappingGameObject)
     {
-        if (Mathf.Abs(this.gameObject.transform.rotation.eulerAngles.x)  == snappingGameObject.transform.rotation.eulerAngles.x + 180)
+        if (this.gameObject.transform.forward  == snappingGameObject.transform.forward)
         {
-            return true;
+            if(this.gameObject.transform.up == snappingGameObject.transform.up 
+                && this.gameObject.transform.right == snappingGameObject.transform.right)
+            {
+                return true;
+            }
+           
         }
-        else if (Mathf.Abs(this.gameObject.transform.rotation.eulerAngles.y) == snappingGameObject.transform.rotation.eulerAngles.y + +180)
+        else if (this.gameObject.transform.right == snappingGameObject.transform.right)
         {
-            return true;
+            if (this.gameObject.transform.up == snappingGameObject.transform.up 
+                && this.gameObject.transform.forward == snappingGameObject.transform.forward)
+            {
+                return true;
+            }
+
         }
-        else if (Mathf.Abs(this.gameObject.transform.rotation.eulerAngles.z) == snappingGameObject.transform.rotation.eulerAngles.z + +180)
+        else if (this.gameObject.transform.up == snappingGameObject.transform.up)
         {
-            return true;
+            if (this.gameObject.transform.forward == snappingGameObject.transform.forward
+                && this.gameObject.transform.right == snappingGameObject.transform.right)
+            {
+                return true;
+            }
+
         }
 
         return false;
