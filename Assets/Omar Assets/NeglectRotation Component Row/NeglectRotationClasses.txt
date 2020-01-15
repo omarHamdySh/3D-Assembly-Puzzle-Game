@@ -1,0 +1,71 @@
+public interface INeglectRotation
+{
+    bool checkRotation(Vector3 firstObjRot, Vector3 secondObjRot );
+}
+
+
+public class DoesntNeglectRotation : MonoBehaviour, INeglectRotation
+{
+    public bool checkRotation(Vector3 firstObjRot, Vector3 secondObjRot)
+    {
+        if (firstObjRot == secondObjRot)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
+
+public class NeglectRotation : MonoBehaviour, INeglectRotation
+{
+    public virtual bool checkRotation(Vector3 firstObjRot, Vector3 secondObjRot)
+    {
+        return true;
+    }
+}
+
+public class NeglectRotationX : NeglectRotation
+{
+    public override bool checkRotation(Vector3 firstObjRot, Vector3 secondObjRot)
+    {
+        if (firstObjRot.y == secondObjRot.y && firstObjRot.z == secondObjRot.z)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+public class NeglectRotationY : NeglectRotation {
+
+    public override bool checkRotation(Vector3 firstObjRot, Vector3 secondObjRot)
+    {
+        if (firstObjRot.x== secondObjRot.x && firstObjRot.z == secondObjRot.z)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+public class NeglectRotationZ : NeglectRotation {
+
+    public override bool checkRotation(Vector3 firstObjRot, Vector3 secondObjRot)
+    {
+        if (firstObjRot.x== secondObjRot.x && firstObjRot.y == secondObjRot.y)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}

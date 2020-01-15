@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.1463097, g: 0.26661313, b: 0.32008946, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.65
+  m_fontSize: 33.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6222,7 +6222,6 @@ GameObject:
   - component: {fileID: 1955106369}
   - component: {fileID: 1955106368}
   - component: {fileID: 1955106370}
-  - component: {fileID: 1955106371}
   - component: {fileID: 1955106373}
   - component: {fileID: 1955106374}
   - component: {fileID: 1955106372}
@@ -6307,18 +6306,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89612c3fab79483458653153bdc232cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1955106371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955106366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd31561946476414980d42a1692a2a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1955106372
