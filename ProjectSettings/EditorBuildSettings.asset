@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Omar Assets/_Scenes/HomeScene.unity
     guid: 5c81e338ff3bdd045ae61f911c974893
   - enabled: 1
+    path: Assets/Omar Assets/_Scenes/PuzzleScene.unity
+    guid: c3b0cc74be25ea4499bc6e6b3e76ea31
+  - enabled: 0
     path: Assets/March Assets/_Scenes/PuzzleScene.unity
     guid: 8338fde46167922439d765ed3067efcc
   m_configObjects: {}
