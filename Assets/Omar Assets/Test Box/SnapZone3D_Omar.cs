@@ -30,7 +30,6 @@ public class SnapZone3D_Omar : MonoBehaviour
         myCollider = GetComponent<Collider>();
     }
 
-
     private void OnTriggerStay(Collider collision)
     {
         if (!isSnapping && !collision.gameObject.GetComponent<Drage3DObjects>().isDragged)
@@ -42,49 +41,74 @@ public class SnapZone3D_Omar : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == other.gameObject.tag)
-        {
-            fireOnSnapEnterEvent(other.gameObject);
-            if (isValidToSnap)
-                evaluateSnapDirection(other.gameObject.transform.position - this.transform.position);
-        }
+        fireOnSnapEnterEvent(other.gameObject);
+        if (isValidToSnap)
+            evaluateSnapDirection(other.gameObject.transform.position - this.transform.position);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (gameObject.tag == other.gameObject.tag)
-        {
-            fireOnSnapExitEvent(other.gameObject);
-        }
+        fireOnSnapExitEvent(other.gameObject);
     }
 
     private void tryToSnap(Collider collision)
     {
         //start the snapping process if this is the object intended to be snapped.
-        if (gameObject.tag == collision.gameObject.tag && this.isValidToSnap)
+        if (this.isValidToSnap)
             snap(collision.gameObject);
-        else if (gameObject.tag == collision.gameObject.tag && !this.isValidToSnap)
+        else if (!this.isValidToSnap)
             unSnap(collision.gameObject);
     }
 
     //March modify
     private bool checkOrientation(GameObject snappingGameObject)
     {
-        if (this.gameObject.transform.rotation == snappingGameObject.transform.rotation)
+        if (CheckRotation(snappingGameObject, 1))
         {
             return true;
         }
-        else if (this.gameObject.transform.rotation.y == -snappingGameObject.transform.rotation.y)
+        else if (CheckRotation(snappingGameObject, -1))
         {
             return true;
         }
-        else 
-        {
-            return false;
-        }
-          
+
+        return false;
     }
 
+    #region TestCode 
+    private bool CheckRotation(GameObject snappingGameObject, int direction)
+    {
+        if (this.gameObject.transform.forward  == snappingGameObject.transform.forward * direction)
+        {
+            if(this.gameObject.transform.up == snappingGameObject.transform.up 
+                && this.gameObject.transform.right == snappingGameObject.transform.right)
+            {
+                return true;
+            }
+           
+        }
+        else if (this.gameObject.transform.right == snappingGameObject.transform.right * direction)
+        {
+            if (this.gameObject.transform.up == snappingGameObject.transform.up 
+                && this.gameObject.transform.forward == snappingGameObject.transform.forward)
+            {
+                return true;
+            }
+
+        }
+        else if (this.gameObject.transform.up == snappingGameObject.transform.up * direction)
+        {
+            if (this.gameObject.transform.forward == snappingGameObject.transform.forward
+                && this.gameObject.transform.right == snappingGameObject.transform.right)
+            {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
+    #endregion
     IEnumerator snapSmoothly(GameObject snappedObject)
     {
         while (snappedObject.transform.position != this.transform.position)
@@ -178,7 +202,7 @@ public class SnapZone3D_Omar : MonoBehaviour
 
     private void fireOnSnapEnterEvent(GameObject snappedObject)
     {
-        OnSnapEnter.Invoke();
+        OnSnapEnter.Invoke();   
         //Play Hovering Animation
 
         //Check wheather it is in the valid orientation to be snapped or not.

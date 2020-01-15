@@ -65,7 +65,7 @@ public class GameManagerAssist : MonoBehaviour
         {
             StartCoroutine(TakeDownTimer());
         }
-        else if (seconds == 0 && takingAway == false && !gameStarted)
+        else if (seconds == 0 && takingAway == false && !gameStarted && !m_GameOver)
         {
             takingAway = true;
             timerTxt.gameObject.SetActive(false);
@@ -146,12 +146,18 @@ public class GameManagerAssist : MonoBehaviour
     //March implement
     public void randomizeRotation(Transform piece)
     {
+        //RotationAngle = 90
         int MaxAngleValue = 360 / RotationAngle;
         int RandomRotationX = Random.Range(0, MaxAngleValue + 1);
         int RandomRotationY = Random.Range(0, MaxAngleValue + 1);
         int RandomRotationZ = Random.Range(0, MaxAngleValue + 1);
-        Vector3 randomRotation = new Vector3(RotationAngle * RandomRotationX, RotationAngle * RandomRotationY, RotationAngle * RandomRotationZ);
-        piece.rotation = Quaternion.Euler(randomRotation);
+
+        //add random Rotation
+        Vector3 randomRotation = new Vector3(this.transform.rotation.x + RotationAngle * RandomRotationX,
+            this.transform.rotation.y + RotationAngle * RandomRotationY,
+            this.transform.rotation.z + RotationAngle * RandomRotationZ);
+
+        piece.Rotate(randomRotation, Space.World);    
     }
 
     #region March Update
