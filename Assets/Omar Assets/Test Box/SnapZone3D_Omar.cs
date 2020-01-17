@@ -63,56 +63,23 @@ public class SnapZone3D_Omar : MonoBehaviour
     //March modify
     private bool checkOrientation(GameObject snappingGameObject)
     {
-        //if (this.gameObject.transform.forward == snappingGameObject.transform.forward)
+        //Compare by Rotation not accuerate
+        //INeglectRotation rotation = snappingGameObject.GetComponent<INeglectRotation>();
+        //if(rotation.CheckRotation(this.transform.rotation.eulerAngles, snappingGameObject.transform.rotation.eulerAngles))
         //{
         //    return true;
         //}
-        if (CheckRotation(snappingGameObject))
+
+        //Compare by Direction 
+        ICompareDirection result = snappingGameObject.GetComponent<ICompareDirection>();
+
+        if(result.CheckDirection(this.transform, snappingGameObject.transform))
         {
             return true;
         }
-        //else if (CheckInverseRotation(snappingGameObject, -1))
-        //{
-        //    return true;
-        //}
-
-         return false;
-    }
-
-    #region TestCode 
-    private bool CheckRotation(GameObject snappingGameObject)
-    {
-        if (this.gameObject.transform.forward  == snappingGameObject.transform.forward)
-        {
-            if(this.gameObject.transform.up == snappingGameObject.transform.up 
-                && this.gameObject.transform.right == snappingGameObject.transform.right)
-            {
-                return true;
-            }
-           
-        }
-        else if (this.gameObject.transform.right == snappingGameObject.transform.right)
-        {
-            if (this.gameObject.transform.up == snappingGameObject.transform.up 
-                && this.gameObject.transform.forward == snappingGameObject.transform.forward)
-            {
-                return true;
-            }
-
-        }
-        else if (this.gameObject.transform.up == snappingGameObject.transform.up)
-        {
-            if (this.gameObject.transform.forward == snappingGameObject.transform.forward
-                && this.gameObject.transform.right == snappingGameObject.transform.right)
-            {
-                return true;
-            }
-
-        }
-
         return false;
     }
-    #endregion
+
     IEnumerator snapSmoothly(GameObject snappedObject)
     {
         while (snappedObject.transform.position != this.transform.position)
