@@ -60,9 +60,9 @@ public class SnapZone3D_Omar : MonoBehaviour
             unSnap(collision.gameObject);
     }
 
-    //March modify
     private bool checkOrientation(GameObject snappingGameObject)
     {
+<<<<<<< HEAD
         if (CheckRotation(snappingGameObject, 1))
         {
             return true;
@@ -94,6 +94,13 @@ public class SnapZone3D_Omar : MonoBehaviour
             {
                 return true;
             }
+=======
+        if (this.gameObject.transform.rotation == snappingGameObject.transform.rotation)
+            return true;
+        else
+            return false;
+    }
+>>>>>>> parent of 94ce28b... Inverse Rotation
 
         }
         else if (this.gameObject.transform.up == snappingGameObject.transform.up * direction)
