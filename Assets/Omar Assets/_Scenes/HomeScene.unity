@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1898,6 +1898,7 @@ GameObject:
   - component: {fileID: 674653697}
   - component: {fileID: 674653696}
   - component: {fileID: 674653695}
+  - component: {fileID: 674653699}
   m_Layer: 5
   m_Name: Easy Btn
   m_TagString: Untagged
@@ -1981,17 +1982,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 110980455}
-        m_MethodName: SetCurrentLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 674653695}
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -2050,6 +2040,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674653693}
   m_CullTransparentMesh: 0
+--- !u!114 &674653699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674653693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e8df93409f98142acb60271f7af693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 0
 --- !u!1 &731265231
 GameObject:
   m_ObjectHideFlags: 0
@@ -6748,6 +6751,7 @@ GameObject:
   - component: {fileID: 1842998571}
   - component: {fileID: 1842998570}
   - component: {fileID: 1842998569}
+  - component: {fileID: 1842998573}
   m_Layer: 5
   m_Name: Normal Btn
   m_TagString: Untagged
@@ -6831,17 +6835,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 110980455}
-        m_MethodName: SetCurrentLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1842998569}
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -6900,6 +6893,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842998567}
   m_CullTransparentMesh: 0
+--- !u!114 &1842998573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842998567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e8df93409f98142acb60271f7af693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 1
 --- !u!1 &1887152914
 GameObject:
   m_ObjectHideFlags: 0
@@ -7391,6 +7397,7 @@ GameObject:
   - component: {fileID: 2030344448}
   - component: {fileID: 2030344447}
   - component: {fileID: 2030344446}
+  - component: {fileID: 2030344450}
   m_Layer: 5
   m_Name: 'Hard Btn '
   m_TagString: Untagged
@@ -7474,17 +7481,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 110980455}
-        m_MethodName: SetCurrentLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2030344446}
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -7543,6 +7539,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030344444}
   m_CullTransparentMesh: 0
+--- !u!114 &2030344450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030344444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e8df93409f98142acb60271f7af693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 2
 --- !u!1 &2051127677
 GameObject:
   m_ObjectHideFlags: 0

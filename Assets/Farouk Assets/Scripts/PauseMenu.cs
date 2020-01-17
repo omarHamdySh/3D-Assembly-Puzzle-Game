@@ -23,27 +23,28 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-        public void Resume()
-        {
-            SettingsPanel.SetActive(false);
-            Time.timeScale = 1f;
-            GameIsPaused = false;
-        }
-        void Pause()
-        {
-            SettingsPanel.SetActive(true);
-            Time.timeScale = 0f;
-            GameIsPaused = true;
-        }
-        public void LoadMenu()
-        {
+    public void Resume()
+    {
+        SettingsPanel.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+    void Pause()
+    {
+        SettingsPanel.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+    public void LoadMenu()
+    {
         Time.timeScale = 1f;
         SceneManager.LoadScene("HomeScene");
-;        }
-        public void QuitMenu()
-        {
+        
+    }
+    public void QuitMenu()
+    {
         Application.Quit();
     }
 
-    
+
 }
