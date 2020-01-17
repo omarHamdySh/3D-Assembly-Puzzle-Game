@@ -21,7 +21,7 @@ public class GameManagerAssist : MonoBehaviour
     public GameObject assemblyPieces;
     [SerializeField] private int RotationAngle = 90;
     [SerializeField] private float slowRandTime = 0.5f;
-  
+
     #region CountDown Timer
     [SerializeField] private int hours = 0, minutes = 0, seconds = 5;
     [SerializeField] private TextMeshProUGUI timerTxt;
@@ -94,7 +94,6 @@ public class GameManagerAssist : MonoBehaviour
     {
 
     }
- 
     /// <summary>
     /// This method is goint to randomize the assembly pieces according to the level of difficulty
     /// The Level of difficulty is 

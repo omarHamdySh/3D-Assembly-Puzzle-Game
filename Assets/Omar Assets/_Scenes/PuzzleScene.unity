@@ -649,7 +649,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapZones: {fileID: 3071830612214637482}
   assemblyPieces: {fileID: 596524758}
-  RotationAngle: 90
   slowRandTime: 0.5
   hours: 0
   minutes: 0
@@ -2910,6 +2909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596524759}
+  - component: {fileID: 596524760}
   m_Layer: 0
   m_Name: Cow Un ordered
   m_TagString: Untagged
@@ -2948,7 +2948,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &646814855
+=======
+=======
+>>>>>>> parent of 94ce28b... Inverse Rotation
+--- !u!114 &596524760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596524758}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d219f9ec4f0aadd4188c465f0faca2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapZones: {fileID: 3071830612214637482}
+  assemblyPieces: {fileID: 596524758}
+  slowRandTime: 0.5
+  hours: 0
+  minutes: 0
+  seconds: 5
+  timerTxt: {fileID: 40676079}
+--- !u!1 &723952243
+>>>>>>> parent of 94ce28b... Inverse Rotation
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
