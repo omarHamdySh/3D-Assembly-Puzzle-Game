@@ -27,7 +27,10 @@ public class SceneMappingManager : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            if (this.gameObject)
+            {
+                Destroy(this.gameObject);
+            }
         }
         DontDestroyOnLoad(this);
     }

@@ -87,7 +87,15 @@ public class GameManager : MonoBehaviour
         {
             _Instance = this;
         }
+        else
+        {
+            if (this.gameObject)
+            {
+                Destroy(this.gameObject);
+            }
+        }
         DontDestroyOnLoad(this.gameObject);
+        
         gameplayFSMManager = GetComponent<GameplayFSMManager>();
         timeManager = GetComponent<TimeManager>();
         SceneManager.sceneLoaded += delegate { OnSceneLoad(); };
@@ -185,8 +193,8 @@ public class GameManager : MonoBehaviour
 
     public void OnSecondChange()
     {
-        if(OnRealSecondChanged!=null)
-        OnRealSecondChanged(timeManager.gameTime.realSecond);
+        if (OnRealSecondChanged != null)
+            OnRealSecondChanged(timeManager.gameTime.realSecond);
     }
 
     /// <summary>
@@ -333,12 +341,14 @@ public class GameManager : MonoBehaviour
         currentLevel = (GameLevelsNames)levelNo;
     }
 
-    public void startLevelTime() {
+    public void startLevelTime()
+    {
 
         isLevelActive = true;
     }
 
-    public void stopAndResetGameTime() {
+    public void stopAndResetGameTime()
+    {
         isLevelActive = false;
         timeManager.resetTime();
     }
