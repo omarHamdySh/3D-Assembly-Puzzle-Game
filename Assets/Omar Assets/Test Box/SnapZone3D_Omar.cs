@@ -63,22 +63,26 @@ public class SnapZone3D_Omar : MonoBehaviour
     //March modify
     private bool checkOrientation(GameObject snappingGameObject)
     {
-        if (CheckRotation(snappingGameObject, 1))
+        //if (this.gameObject.transform.forward == snappingGameObject.transform.forward)
+        //{
+        //    return true;
+        //}
+        if (CheckRotation(snappingGameObject))
         {
             return true;
         }
-        else if (CheckRotation(snappingGameObject, -1))
-        {
-            return true;
-        }
+        //else if (CheckInverseRotation(snappingGameObject, -1))
+        //{
+        //    return true;
+        //}
 
-        return false;
+         return false;
     }
 
     #region TestCode 
-    private bool CheckRotation(GameObject snappingGameObject, int direction)
+    private bool CheckRotation(GameObject snappingGameObject)
     {
-        if (this.gameObject.transform.forward  == snappingGameObject.transform.forward * direction)
+        if (this.gameObject.transform.forward  == snappingGameObject.transform.forward)
         {
             if(this.gameObject.transform.up == snappingGameObject.transform.up 
                 && this.gameObject.transform.right == snappingGameObject.transform.right)
@@ -87,7 +91,7 @@ public class SnapZone3D_Omar : MonoBehaviour
             }
            
         }
-        else if (this.gameObject.transform.right == snappingGameObject.transform.right * direction)
+        else if (this.gameObject.transform.right == snappingGameObject.transform.right)
         {
             if (this.gameObject.transform.up == snappingGameObject.transform.up 
                 && this.gameObject.transform.forward == snappingGameObject.transform.forward)
@@ -96,7 +100,7 @@ public class SnapZone3D_Omar : MonoBehaviour
             }
 
         }
-        else if (this.gameObject.transform.up == snappingGameObject.transform.up * direction)
+        else if (this.gameObject.transform.up == snappingGameObject.transform.up)
         {
             if (this.gameObject.transform.forward == snappingGameObject.transform.forward
                 && this.gameObject.transform.right == snappingGameObject.transform.right)
